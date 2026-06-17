@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n="titulo-pagina">Calculadora IMC y TMB — Calcula tu Índice de Masa Corporal y Tasa Metabólica Basal</title>
+  <meta name="description" content="Calcula tu IMC y TMB con medidor animado. Clasificación OMS, déficit y superávit calórico. Gratuito.">
+  <meta name="keywords" content="IMC, calculadora IMC, índice masa corporal, TMB, tasa metabólica basal, calorías, déficit calórico, peso saludable">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Calculadora IMC y TMB">
+  <meta name="revisit-after" content="7 days">
+  <link rel="canonical" href="https://calculadoraimc.es/">
+
+  <meta property="og:title" data-i18n-attr="content" data-i18n-key="og-titulo" content="Calculadora IMC y TMB — Gratuita y con medidor animado">
+  <meta property="og:description" data-i18n-attr="content" data-i18n-key="og-desc" content="Calcula tu IMC y TMB al instante. Obtén tu clasificación según la OMS con un medidor visual interactivo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calculadoraimc.es/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-attr="content" data-i18n-key="tw-titulo" content="Calculadora IMC y TMB">
+  <meta name="twitter:description" data-i18n-attr="content" data-i18n-key="tw-desc" content="Calcula tu IMC y TMB con medidor animado. Clasificación OMS, déficit y superávit calórico.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora IMC y TMB",
+    "url": "https://calculadoraimc.es/",
+    "description": "Calcula tu Índice de Masa Corporal (IMC) y Tasa Metabólica Basal (TMB) de forma gratuita. Incluye medidor animado, clasificación OMS y recomendaciones calóricas.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "inLanguage": "es"
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%235C0A28'/%3E%3Cpath d='M18 36h8l4-18 4 28 4-18 4 8h4' stroke='%23A9A9A9' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <main class="contenedor">
+    <header class="encabezado">
+      <div class="icono-encabezado" aria-hidden="true">&#9878;</div>
+      <h1 data-i18n="titulo">Calculadora de IMC &amp; TMB</h1>
+      <p data-i18n="subtitulo">Conoce tu Índice de Masa Corporal y Tasa Metabólica Basal</p>
+    </header>
+
+    <div class="selector-idioma" id="selector-idioma" role="switch" aria-checked="true" aria-label="Cambiar idioma" tabindex="0">
+      <div class="pista-idioma" id="pista-idioma">
+        <span class="texto-es">ES</span>
+        <span class="texto-en">EN</span>
+        <div class="deslizador-idioma" id="deslizador-idioma">
+          <svg class="bandera" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
+            <rect width="30" height="20" fill="#C60B1E"/>
+            <rect y="5" width="30" height="10" fill="#FFC400"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="barra-herramientas" role="toolbar" aria-label="Opciones">
+      <div class="grupo-herramientas">
+        <button class="herramienta herramienta-unidad activa" data-unidad="metrico" title="Sistema métrico" aria-label="Cambiar a métrico" data-i18n="metrico">Métrico</button>
+        <button class="herramienta herramienta-unidad" data-unidad="imperial" title="Sistema imperial" aria-label="Cambiar a imperial" data-i18n="imperial">Imperial</button>
+      </div>
+    </div>
+
+    <nav class="pestanas" role="tablist" aria-label="Calculadoras">
+      <button class="btn-pestana activo" data-pestana="imc" role="tab" aria-selected="true" id="pestana-imc" aria-controls="panel-imc" data-i18n="pestana-imc">IMC</button>
+      <button class="btn-pestana" data-pestana="tmb" role="tab" aria-selected="false" id="pestana-tmb" aria-controls="panel-tmb" data-i18n="pestana-tmb">TMB</button>
+    </nav>
+
+    <section class="contenido-pestana activo" id="panel-imc" role="tabpanel" aria-labelledby="pestana-imc">
+      <div class="info-box info-superior">
+        <h3 class="info-box-titulo" data-i18n="imc-que-es-titulo">¿Qué es el IMC?</h3>
+        <p class="info-box-texto" data-i18n="imc-que-es-texto">El <strong>Índice de Masa Corporal (IMC)</strong> es un indicador avalado por la <strong>Organización Mundial de la Salud (OMS)</strong> que relaciona tu peso y altura para clasificar tu estado nutricional. Se calcula dividiendo el peso en kilogramos entre el cuadrado de la altura en metros (kg/m²).</p>
+        <ul class="info-box-lista" data-i18n="imc-que-es-lista">
+          <li><strong>Clasificación oficial OMS</strong> — 8 categorías que van desde "Delgadez severa" (&lt; 16) hasta "Obesidad grado III" (≥ 40)</li>
+          <li><strong>Rango saludable</strong> — entre 18.5 y 24.9, asociado a menor riesgo de enfermedades crónicas</li>
+          <li><strong>Herramienta universal</strong> — el método de cribado más utilizado a nivel mundial por su sencillez y fiabilidad</li>
+        </ul>
+      </div>
+      <article class="tarjeta">
+        <header class="encabezado-tarjeta">
+          <h2 data-i18n="imc-titulo">&#9878; Calcula tu IMC</h2>
+          <p data-i18n="imc-desc">El Índice de Masa Corporal relaciona tu peso y altura para evaluar tu estado nutricional.</p>
+        </header>
+        <form id="formulario-imc" class="formulario" novalidate>
+          <div class="fila-formulario">
+            <div class="grupo-formulario">
+              <label for="peso-imc" data-i18n="peso">Peso <span class="unidad" id="unidad-peso-imc">(kg)</span></label>
+              <div class="envoltorio-input">
+                <input type="number" id="peso-imc" name="peso" data-i18n-placeholder="placeholder-peso" placeholder="Ej: 70" min="1" max="500" step="0.1" required>
+                <span class="unidad-input" id="unidad-input-peso-imc" aria-hidden="true">kg</span>
+              </div>
+            </div>
+            <div class="grupo-formulario">
+              <label for="altura-imc" data-i18n="altura">Altura <span class="unidad" id="unidad-altura-imc">(cm)</span></label>
+              <div class="envoltorio-input">
+                <input type="number" id="altura-imc" name="altura" data-i18n-placeholder="placeholder-altura" placeholder="Ej: 175" min="1" max="300" step="0.1" required>
+                <span class="unidad-input" id="unidad-input-altura-imc" aria-hidden="true">cm</span>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primario" id="btn-imc">
+            <span class="texto-btn" data-i18n="btn-imc">Calcular IMC</span>
+            <span class="icono-btn" aria-hidden="true">&#10140;</span>
+          </button>
+        </form>
+      </article>
+
+      <div class="tarjeta-resultado" id="resultado-imc" style="display:none" role="region" aria-live="polite">
+        <div class="contenedor-medidor">
+          <svg class="svg-medidor" viewBox="0 0 300 270" aria-hidden="true">
+            <defs>
+              <linearGradient id="gradiente-medidor" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stop-color="#dc2626"/>
+                <stop offset="14%"  stop-color="#ef4444"/>
+                <stop offset="22%"  stop-color="#f59e0b"/>
+                <stop offset="35%"  stop-color="#10b981"/>
+                <stop offset="50%"  stop-color="#10b981"/>
+                <stop offset="65%"  stop-color="#f59e0b"/>
+                <stop offset="78%"  stop-color="#f97316"/>
+                <stop offset="90%"  stop-color="#ef4444"/>
+                <stop offset="100%" stop-color="#dc2626"/>
+              </linearGradient>
+            </defs>
+            <path class="fondo-medidor" d="M 65.15 234.85 A 120 120 0 1 1 234.85 234.85" fill="none" stroke="#d4d4d4" stroke-width="24" stroke-linecap="round"/>
+            <path class="relleno-medidor" id="relleno-medidor" d="M 65.15 234.85 A 120 120 0 1 1 234.85 234.85" fill="none" stroke="url(#gradiente-medidor)" stroke-width="24" stroke-linecap="round" stroke-dasharray="565.487 565.487" stroke-dashoffset="565.487" style="transition: stroke-dashoffset 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);"/>
+          </svg>
+          <output class="valor-medidor" id="valor-medidor" for="peso-imc altura-imc">--</output>
+          <span class="etiqueta-medidor" data-i18n="etiqueta-imc">IMC</span>
+        </div>
+
+        <div class="info-resultado">
+          <div class="categoria-resultado" id="categoria-imc"></div>
+          <div class="detalle-resultado" id="detalle-imc"></div>
+        </div>
+
+        <div class="rango-peso-ideal" id="rango-peso-ideal" style="display:none">
+          <strong data-i18n="peso-ideal-label">&#9679; Peso saludable para tu altura:</strong>
+          <span id="texto-rango-peso"></span>
+        </div>
+
+        <div class="tabla-imc" role="table" aria-label="Clasificación del IMC según la OMS">
+          <div class="encabezado-tabla" role="row" data-i18n="tabla-titulo">Clasificaci&oacute;n del IMC</div>
+          <div class="fila-tabla" role="row" data-min="0" data-max="16"><span role="cell">&lt; 16</span><span role="cell" data-i18n="cat-severa">Delgadez severa</span></div>
+          <div class="fila-tabla" role="row" data-min="16" data-max="17"><span role="cell">16 - 16.99</span><span role="cell" data-i18n="cat-moderada">Delgadez moderada</span></div>
+          <div class="fila-tabla" role="row" data-min="17" data-max="18.5"><span role="cell">17 - 18.49</span><span role="cell" data-i18n="cat-leve">Delgadez leve</span></div>
+          <div class="fila-tabla" role="row" data-min="18.5" data-max="25"><span role="cell">18.5 - 24.99</span><span role="cell" data-i18n="cat-normal">Normal</span></div>
+          <div class="fila-tabla" role="row" data-min="25" data-max="30"><span role="cell">25 - 29.99</span><span role="cell" data-i18n="cat-sobrepeso">Sobrepeso</span></div>
+          <div class="fila-tabla" role="row" data-min="30" data-max="35"><span role="cell">30 - 34.99</span><span role="cell" data-i18n="cat-ob1">Obesidad grado I</span></div>
+          <div class="fila-tabla" role="row" data-min="35" data-max="40"><span role="cell">35 - 39.99</span><span role="cell" data-i18n="cat-ob2">Obesidad grado II</span></div>
+          <div class="fila-tabla" role="row" data-min="40" data-max="99"><span role="cell">&ge; 40</span><span role="cell" data-i18n="cat-ob3">Obesidad grado III</span></div>
+        </div>
+      </div>
+
+      <div class="info-box info-inferior">
+        <h3 class="info-box-titulo" data-i18n="imc-importancia-titulo">¿Por qué es importante calcular tu IMC?</h3>
+        <p class="info-box-texto" data-i18n="imc-importancia-texto">Conocer tu IMC es el primer paso para tomar el control de tu salud. Un IMC fuera del rango saludable se asocia con un mayor riesgo de desarrollar las siguientes enfermedades y condiciones:</p>
+        <ul class="info-box-lista" data-i18n="imc-importancia-lista">
+          <li><strong>Enfermedades cardiovasculares</strong> — hipertensión arterial, infarto de miocardio, insuficiencia cardíaca y accidentes cerebrovasculares</li>
+          <li><strong>Diabetes tipo 2</strong> — el exceso de grasa corporal es el principal factor de riesgo modificable</li>
+          <li><strong>Problemas articulares y osteoartritis</strong> — el sobrepeso aumenta la presión sobre rodillas, caderas y columna</li>
+          <li><strong>Apnea del sueño y trastornos respiratorios</strong> — la obesidad dificulta la respiración durante el sueño</li>
+          <li><strong>Ciertos tipos de cáncer</strong> — la OMS asocia la obesidad con mayor riesgo de cáncer de colon, mama, endometrio, hígado y riñón</li>
+          <li><strong>Reducción de la calidad y esperanza de vida</strong> — la obesidad severa puede reducir hasta 10 años la esperanza de vida</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contenido-pestana" id="panel-tmb" role="tabpanel" aria-labelledby="pestana-tmb">
+      <div class="info-box info-superior">
+        <h3 class="info-box-titulo" data-i18n="tmb-que-es-titulo">¿Qué es la Tasa Metabólica Basal?</h3>
+        <p class="info-box-texto" data-i18n="tmb-que-es-texto">La <strong>Tasa Metabólica Basal (TMB)</strong> es la cantidad mínima de energía que tu cuerpo necesita en reposo para mantener las funciones vitales: respirar, bombear sangre, mantener la temperatura corporal y la actividad celular. Representa entre el <strong>60 y el 75 %</strong> del gasto calórico total diario.</p>
+        <ul class="info-box-lista" data-i18n="tmb-que-es-lista">
+          <li><strong>Ecuación Mifflin-St Jeor</strong> — reconocida por la comunidad científica como la más precisa para la población general (1990)</li>
+          <li><strong>60–75 % del gasto diario</strong> — la mayor parte de las calorías que quemas son solo para mantenerte vivo</li>
+          <li><strong>Factores determinantes</strong> — peso, altura, edad, sexo y composición corporal influyen directamente en tu TMB</li>
+        </ul>
+      </div>
+      <article class="tarjeta">
+        <header class="encabezado-tarjeta">
+          <h2 data-i18n="tmb-titulo">&#9881; Calcula tu TMB</h2>
+          <p data-i18n="tmb-desc">La Tasa Metabólica Basal son las calor&iacute;as que consumes en reposo. Con ella podr&aacute;s planificar tu dieta con precisi&oacute;n.</p>
+        </header>
+        <form id="formulario-tmb" class="formulario" novalidate>
+          <div class="fila-formulario fila-formulario-3">
+            <div class="grupo-formulario">
+              <label for="peso-tmb" data-i18n="peso">Peso <span class="unidad" id="unidad-peso-tmb">(kg)</span></label>
+              <div class="envoltorio-input">
+                <input type="number" id="peso-tmb" name="peso" data-i18n-placeholder="placeholder-peso" placeholder="Ej: 70" min="1" max="500" step="0.1" required>
+                <span class="unidad-input" id="unidad-input-peso-tmb" aria-hidden="true">kg</span>
+              </div>
+            </div>
+            <div class="grupo-formulario">
+              <label for="altura-tmb" data-i18n="altura">Altura <span class="unidad" id="unidad-altura-tmb">(cm)</span></label>
+              <div class="envoltorio-input">
+                <input type="number" id="altura-tmb" name="altura" data-i18n-placeholder="placeholder-altura" placeholder="Ej: 175" min="1" max="300" step="0.1" required>
+                <span class="unidad-input" id="unidad-input-altura-tmb" aria-hidden="true">cm</span>
+              </div>
+            </div>
+            <div class="grupo-formulario">
+              <label for="edad-tmb" data-i18n="edad">Edad <span class="unidad">(a&ntilde;os)</span></label>
+              <div class="envoltorio-input">
+                <input type="number" id="edad-tmb" name="edad" placeholder="Ej: 25" min="1" max="120" required>
+                <span class="unidad-input" aria-hidden="true">a&ntilde;os</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="fila-formulario">
+            <div class="grupo-formulario">
+              <label data-i18n="sexo">Sexo</label>
+              <div class="grupo-radio">
+                <label class="btn-radio">
+                  <input type="radio" name="sexo" value="hombre" checked>
+                  <span class="indicador-radio" aria-hidden="true"></span>
+                  <span class="etiqueta-radio" data-i18n="hombre">Hombre</span>
+                </label>
+                <label class="btn-radio">
+                  <input type="radio" name="sexo" value="mujer">
+                  <span class="indicador-radio" aria-hidden="true"></span>
+                  <span class="etiqueta-radio" data-i18n="mujer">Mujer</span>
+                </label>
+              </div>
+            </div>
+            <div class="grupo-formulario">
+              <label for="actividad-tmb" data-i18n="actividad">Nivel de actividad</label>
+              <div class="envoltorio-select">
+                <select id="actividad-tmb" name="actividad" required>
+                  <option value="1.2" data-i18n="act-sed">Sedentario — poco o ning&uacute;n ejercicio</option>
+                  <option value="1.375" data-i18n="act-lig">Ligero — 1-3 d&iacute;as/semana</option>
+                  <option value="1.55" selected data-i18n="act-mod">Moderado — 3-5 d&iacute;as/semana</option>
+                  <option value="1.725" data-i18n="act-act">Activo — 6-7 d&iacute;as/semana</option>
+                  <option value="1.9" data-i18n="act-ext">Muy activo — 2 veces/d&iacute;a o trabajo f&iacute;sico</option>
+                </select>
+                <span class="flecha-select" aria-hidden="true">&#9660;</span>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primario" id="btn-tmb">
+            <span class="texto-btn" data-i18n="btn-tmb">Calcular TMB</span>
+            <span class="icono-btn" aria-hidden="true">&#10140;</span>
+          </button>
+        </form>
+      </article>
+
+      <div class="tarjeta-resultado" id="resultado-tmb" style="display:none" role="region" aria-live="polite">
+        <div class="cuadricula-tmb">
+          <div class="metrica-tmb">
+            <output class="valor-metrica" id="tmb-valor">0</output>
+            <div class="etiqueta-metrica">TMB <span class="unidad">kcal/d&iacute;a</span></div>
+            <div class="descripcion-metrica" data-i18n="desc-tmb">Metabolismo basal en reposo</div>
+          </div>
+          <div class="separador-tmb" aria-hidden="true">&rarr;</div>
+          <div class="metrica-tmb">
+            <output class="valor-metrica" id="tdee-valor">0</output>
+            <div class="etiqueta-metrica">TDEE <span class="unidad">kcal/d&iacute;a</span></div>
+            <div class="descripcion-metrica" data-i18n="desc-tdee">Gasto energ&eacute;tico total</div>
+          </div>
+        </div>
+
+        <div class="recomendaciones-tmb">
+          <div class="tarjeta-recomendacion recomendacion-deficit">
+            <div class="titulo-recomendacion" data-i18n="deficit-tit">D&eacute;ficit <span class="emoji-recomendacion" aria-hidden="true">&#128200;</span></div>
+            <output class="valor-recomendacion" id="deficit-valor">0</output>
+            <div class="descripcion-recomendacion" data-i18n="deficit-desc">kcal/d&iacute;a para perder <span id="perdida-valor">0</span> <span class="unidad-perdida" id="unidad-perdida">kg</span>/semana</div>
+          </div>
+          <div class="tarjeta-recomendacion recomendacion-mant">
+            <div class="titulo-recomendacion" data-i18n="mant-tit">Mantenimiento <span class="emoji-recomendacion" aria-hidden="true">&#9888;</span></div>
+            <output class="valor-recomendacion" id="mant-valor">0</output>
+            <div class="descripcion-recomendacion" data-i18n="mant-desc">kcal/d&iacute;a para mantener tu peso</div>
+          </div>
+          <div class="tarjeta-recomendacion recomendacion-super">
+            <div class="titulo-recomendacion" data-i18n="super-tit">Super&aacute;vit <span class="emoji-recomendacion" aria-hidden="true">&#128170;</span></div>
+            <output class="valor-recomendacion" id="superavit-valor">0</output>
+            <div class="descripcion-recomendacion" data-i18n="super-desc">kcal/d&iacute;a para ganar <span id="ganancia-valor">0</span> <span class="unidad-ganancia" id="unidad-ganancia">kg</span>/semana</div>
+          </div>
+        </div>
+
+        <div class="nota-tmb" data-i18n="tmb-nota">
+          <strong>&#9432; Nota:</strong> Estas cifras son estimaciones basadas en la ecuaci&oacute;n Mifflin-St Jeor. Consulta a un profesional de la salud antes de iniciar cualquier dieta o plan de ejercicio.
+        </div>
+      </div>
+
+      <div class="info-box info-inferior">
+        <h3 class="info-box-titulo" data-i18n="tmb-importancia-titulo">¿Por qué es importante calcular tu TMB?</h3>
+        <p class="info-box-texto" data-i18n="tmb-importancia-texto">Conocer tu TMB es la base de cualquier plan nutricional respaldado por la ciencia. Te permite entender cuánta energía gasta tu cuerpo y ajustar tu alimentación según tus objetivos:</p>
+        <ul class="info-box-lista" data-i18n="tmb-importancia-lista">
+          <li><strong>Calcular tu Gasto Energético Total (TDEE)</strong> — multiplicando tu TMB por tu nivel de actividad física (1.2 a 1.9) obtienes las calorías que realmente necesitas al día</li>
+          <li><strong>Perder peso de forma controlada</strong> — un déficit de ~500 kcal/día permite perder aproximadamente 0.5 kg por semana de manera segura</li>
+          <li><strong>Ganar masa muscular</strong> — un superávit de ~300–500 kcal/día proporciona la energía extra necesaria para la síntesis muscular</li>
+          <li><strong>Mantener tu peso a largo plazo</strong> — ajustar tu ingesta a tu TDEE evita el efecto rebote después de una dieta</li>
+          <li><strong>Planificar según tu actividad</strong> — desde sedentario (×1.2) hasta muy activo (×1.9), adaptas tu nutrición a tu estilo de vida real</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="referencias" id="referencias">
+      <button class="ref-toggle" id="ref-toggle" data-i18n="ref-titulo">📚 Fuentes y referencias ▶</button>
+      <div class="ref-lista" id="ref-lista">
+        <ol>
+          <li><a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener noreferrer" data-i18n="ref-1">WHO — Obesity and overweight (clasificación del IMC y prevalencia global)</a></li>
+          <li><a href="https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index" target="_blank" rel="noopener noreferrer" data-i18n="ref-2">WHO Global Health Observatory — Body mass index (BMI) data portal</a></li>
+          <li><a href="https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html" target="_blank" rel="noopener noreferrer" data-i18n="ref-3">CDC — Adult BMI Categories (clasificación oficial de EE.UU.)</a></li>
+          <li><a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm" target="_blank" rel="noopener noreferrer" data-i18n="ref-4">NHLBI / NIH — Calculate Your BMI (National Heart, Lung, and Blood Institute)</a></li>
+          <li><a href="https://www.heart.org/en/healthy-living/healthy-eating/losing-weight/bmi-in-adults" target="_blank" rel="noopener noreferrer" data-i18n="ref-5">American Heart Association — Body Mass Index in Adults</a></li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" data-i18n="ref-6">PubMed / NIH — Mifflin-St Jeor original study (Am J Clin Nutr, 1990)</a></li>
+          <li><a href="https://www.aesan.gob.es/" target="_blank" rel="noopener noreferrer" data-i18n="ref-7">AESAN — Agencia Española de Seguridad Alimentaria y Nutrición</a></li>
+          <li><a href="https://www.seen.es/calculadoras/calculadora-imc" target="_blank" rel="noopener noreferrer" data-i18n="ref-8">SEEN — Sociedad Española de Endocrinología y Nutrición</a></li>
+        </ol>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie-pagina">
+    <p><small data-i18n="footer">Calculadora IMC &amp; TMB &mdash; 2025 &mdash; Informaci&oacute;n con fines informativos, no sustituye el consejo m&eacute;dico profesional.</small></p>
+  </footer>
+
+  <button class="herramienta btn-modo-oscuro-fijo" id="btn-modo-oscuro" title="Modo oscuro" aria-label="Alternar modo oscuro">
+    <span class="icono-modo" id="icono-modo">&#9790;</span>
+  </button>
+
+  <script src="scripts/script.js" defer></script>
+</body>
+</html>
