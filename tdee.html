@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n="tdee-titulo-pagina">Calculadora de TDEE — Calcula tu Gasto Energético Total | MetriBody</title>
+  <meta name="description" content="Calcula tu TDEE gratis. Gasto Energético Total según tu actividad, déficit calórico, mantenimiento y superávit.">
+  <meta name="keywords" content="TDEE, calculadora TDEE, gasto energético total, calorías diarias, déficit calórico, actividad física, metabolismo">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="MetriBody">
+  <link rel="canonical" href="https://metribody.netlify.app/tdee.html">
+  <link rel="alternate" hreflang="es" href="https://metribody.netlify.app/tdee.html">
+  <link rel="alternate" hreflang="en" href="https://metribody.netlify.app/tdee.html">
+
+  <meta property="og:title" data-i18n-attr="content" data-i18n-key="tdee-og-titulo" content="Calculadora de TDEE gratuita — MetriBody">
+  <meta property="og:description" data-i18n-attr="content" data-i18n-key="tdee-og-desc" content="Calcula tu TDEE al instante. Gasto Energético Total según tu actividad, déficit calórico y más.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metribody.netlify.app/tdee.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-attr="content" data-i18n-key="tdee-tw-titulo" content="Calculadora de TDEE — MetriBody">
+  <meta name="twitter:description" data-i18n-attr="content" data-i18n-key="tdee-tw-desc" content="Calcula tu TDEE gratis. Gasto energético total, déficit y superávit calórico.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de TDEE — MetriBody",
+    "url": "https://metribody.netlify.app/tdee.html",
+    "description": "Calcula tu Gasto Energético Total con la ecuación Mifflin-St Jeor y comparativa por nivel de actividad.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "inLanguage": ["es", "en"]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%235C0A28'/%3E%3Cpath d='M18 36h8l4-18 4 28 4-18 4 8h4' stroke='%23A9A9A9' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<a href="#contenido-principal" class="enlace-salto">Saltar al contenido</a>
+
+<div class="selector-idioma" id="selector-idioma" role="switch" aria-checked="true" aria-label="Cambiar idioma" tabindex="0">
+  <div class="pista-idioma" id="pista-idioma">
+    <span class="texto-es">ES</span>
+    <span class="texto-en">EN</span>
+    <div class="deslizador-idioma" id="deslizador-idioma">
+      <svg class="bandera" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
+        <rect width="30" height="20" fill="#C60B1E"/>
+        <rect y="5" width="30" height="10" fill="#FFC400"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<nav class="navegacion-principal" aria-label="Navegación principal">
+  <div class="nav-marca">MetriBody</div>
+  <ul class="nav-lista">
+    <li><a href="index.html" class="nav-link" data-i18n="nav-inicio">Inicio</a></li>
+    <li><a href="imc.html" class="nav-link" data-i18n="nav-imc">IMC</a></li>
+    <li><a href="tmb.html" class="nav-link" data-i18n="nav-tmb">TMB</a></li>
+    <li><a href="tdee.html" class="nav-link" aria-current="page" data-i18n="nav-tdee">TDEE</a></li>
+    <li><a href="macros.html" class="nav-link" data-i18n="nav-macros">Macros</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menú" aria-expanded="false">&#9776;</button>
+</nav>
+
+<main class="contenedor" id="contenido-principal">
+
+  <section class="calculadoras-seccion">
+
+    <header class="encabezado">
+      <div class="icono-encabezado" aria-hidden="true">&#9889;</div>
+      <h1 data-i18n="tdee-titulo">&#26A1; Calcula tu TDEE</h1>
+      <p data-i18n="tdee-desc">El Gasto Energético Total son las calorías que realmente necesitas cada día según tu nivel de actividad.</p>
+    </header>
+
+    <div class="barra-herramientas" role="toolbar" aria-label="Opciones">
+      <div class="grupo-herramientas">
+        <button class="herramienta herramienta-unidad activa" data-unidad="metrico" title="Sistema métrico" aria-label="Cambiar a métrico" data-i18n="metrico">Métrico</button>
+        <button class="herramienta herramienta-unidad" data-unidad="imperial" title="Sistema imperial" aria-label="Cambiar a imperial" data-i18n="imperial">Imperial</button>
+      </div>
+    </div>
+
+    <div class="info-box info-superior">
+      <h2 class="info-box-titulo" data-i18n="tdee-que-es-titulo">¿Qué es el Gasto Energético Total (TDEE)?</h2>
+      <p class="info-box-texto" data-i18n="tdee-que-es-texto">El <strong>Gasto Energético Total (TDEE)</strong> es la cantidad real de calorías que tu cuerpo quema en un día completo, incluyendo todas las actividades: dormir, trabajar, hacer ejercicio e incluso digerir los alimentos. Se calcula multiplicando tu <strong>Tasa Metabólica Basal (TMB)</strong> por un factor que depende de tu nivel de actividad física.</p>
+      <ul class="info-box-lista" data-i18n="tdee-que-es-lista">
+        <li><strong>Cálculo personalizado</strong> — el TDEE se obtiene multiplicando la TMB por el factor de actividad: 1.2 (sedentario) a 1.9 (muy activo).</li>
+        <li><strong>Más preciso que la TMB sola</strong> — dos personas con la misma TMB pueden tener TDEE muy diferentes según su rutina diaria.</li>
+        <li><strong>Base para cualquier objetivo</strong> — déficit para perder peso, superávit para ganar masa, o mantenimiento.</li>
+      </ul>
+    </div>
+
+    <article class="tarjeta">
+      <header class="encabezado-tarjeta">
+        <h2 data-i18n="tdee-titulo">&#26A1; Calcula tu TDEE</h2>
+        <p data-i18n="tdee-desc">El Gasto Energético Total son las calorías que realmente necesitas cada día según tu nivel de actividad.</p>
+      </header>
+      <form id="formulario-tdee" class="formulario" novalidate>
+        <div class="fila-formulario fila-formulario-3">
+          <div class="grupo-formulario">
+            <label for="peso-tdee" data-i18n="peso">Peso <span class="unidad" id="unidad-peso-tdee">(kg)</span></label>
+            <div class="envoltorio-input">
+              <input type="number" id="peso-tdee" name="peso" data-i18n-placeholder="placeholder-peso" placeholder="Ej: 70" min="1" max="500" step="0.1" required>
+              <span class="unidad-input" id="unidad-input-peso-tdee" aria-hidden="true">kg</span>
+            </div>
+          </div>
+          <div class="grupo-formulario">
+            <label for="altura-tdee" data-i18n="altura">Altura <span class="unidad" id="unidad-altura-tdee">(cm)</span></label>
+            <div class="envoltorio-input">
+              <input type="number" id="altura-tdee" name="altura" data-i18n-placeholder="placeholder-altura" placeholder="Ej: 175" min="1" max="300" step="0.1" required>
+              <span class="unidad-input" id="unidad-input-altura-tdee" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="grupo-formulario">
+            <label for="edad-tdee" data-i18n="edad">Edad <span class="unidad">(a&ntilde;os)</span></label>
+            <div class="envoltorio-input">
+              <input type="number" id="edad-tdee" name="edad" placeholder="Ej: 25" min="1" max="120" required>
+              <span class="unidad-input" aria-hidden="true">a&ntilde;os</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fila-formulario">
+          <div class="grupo-formulario">
+            <label data-i18n="sexo">Sexo</label>
+            <div class="grupo-radio">
+              <label class="btn-radio">
+                <input type="radio" name="sexo-tdee" value="hombre" checked>
+                <span class="indicador-radio" aria-hidden="true"></span>
+                <span class="etiqueta-radio" data-i18n="hombre">Hombre</span>
+              </label>
+              <label class="btn-radio">
+                <input type="radio" name="sexo-tdee" value="mujer">
+                <span class="indicador-radio" aria-hidden="true"></span>
+                <span class="etiqueta-radio" data-i18n="mujer">Mujer</span>
+              </label>
+            </div>
+          </div>
+          <div class="grupo-formulario">
+            <label for="actividad-tdee" data-i18n="actividad">Nivel de actividad</label>
+            <div class="envoltorio-select">
+              <select id="actividad-tdee" name="actividad" required>
+                <option value="1.2" data-i18n="act-sed">Sedentario — poco o ning&uacute;n ejercicio</option>
+                <option value="1.375" data-i18n="act-lig">Ligero — 1-3 d&iacute;as/semana</option>
+                <option value="1.55" selected data-i18n="act-mod">Moderado — 3-5 d&iacute;as/semana</option>
+                <option value="1.725" data-i18n="act-act">Activo — 6-7 d&iacute;as/semana</option>
+                <option value="1.9" data-i18n="act-ext">Muy activo — 2 veces/d&iacute;a o trabajo f&iacute;sico</option>
+              </select>
+              <span class="flecha-select" aria-hidden="true">&#9660;</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primario" id="btn-tdee">
+          <span class="texto-btn" data-i18n="btn-tdee">Calcular TDEE</span>
+          <span class="icono-btn" aria-hidden="true">&#10140;</span>
+        </button>
+      </form>
+    </article>
+
+    <div class="tarjeta-resultado" id="resultado-tdee" style="display:none" role="region" aria-live="polite">
+      <div class="cuadricula-tmb">
+        <div class="metrica-tmb">
+          <output class="valor-metrica" id="tdee-bmr-valor">0</output>
+          <div class="etiqueta-metrica"><span data-i18n="tdee-bmr-label">TMB</span> <span class="unidad">kcal/d&iacute;a</span></div>
+          <div class="descripcion-metrica" data-i18n="desc-tmb">Metabolismo basal en reposo</div>
+        </div>
+        <div class="separador-tmb" aria-hidden="true">&rarr;</div>
+        <div class="metrica-tmb">
+          <output class="valor-metrica" id="tdee-tdee-valor">0</output>
+          <div class="etiqueta-metrica"><span data-i18n="tdee-tdee-label">TDEE</span> <span class="unidad">kcal/d&iacute;a</span></div>
+          <div class="descripcion-metrica" data-i18n="desc-tdee">Gasto energ&eacute;tico total</div>
+        </div>
+      </div>
+
+      <div class="recomendaciones-tmb">
+        <div class="tarjeta-recomendacion recomendacion-deficit">
+          <div class="titulo-recomendacion" data-i18n="deficit-tit">D&eacute;ficit <span class="emoji-recomendacion" aria-hidden="true">&#128200;</span></div>
+          <output class="valor-recomendacion" id="tdee-deficit-valor">0</output>
+          <div class="descripcion-recomendacion" data-i18n="deficit-desc">kcal/d&iacute;a para perder <span id="tdee-perdida-valor">0</span> <span class="unidad-perdida" id="tdee-unidad-perdida">kg</span>/semana</div>
+        </div>
+        <div class="tarjeta-recomendacion recomendacion-mant">
+          <div class="titulo-recomendacion" data-i18n="mant-tit">Mantenimiento <span class="emoji-recomendacion" aria-hidden="true">&#9888;</span></div>
+          <output class="valor-recomendacion" id="tdee-mant-valor">0</output>
+          <div class="descripcion-recomendacion" data-i18n="mant-desc">kcal/d&iacute;a para mantener tu peso</div>
+        </div>
+        <div class="tarjeta-recomendacion recomendacion-super">
+          <div class="titulo-recomendacion" data-i18n="super-tit">Super&aacute;vit <span class="emoji-recomendacion" aria-hidden="true">&#128170;</span></div>
+          <output class="valor-recomendacion" id="tdee-superavit-valor">0</output>
+          <div class="descripcion-recomendacion" data-i18n="super-desc">kcal/d&iacute;a para ganar <span id="tdee-ganancia-valor">0</span> <span class="unidad-ganancia" id="tdee-unidad-ganancia">kg</span>/semana</div>
+        </div>
+      </div>
+
+      <div class="tabla-imc" role="table" aria-label="Comparativa TDEE por nivel de actividad" id="tdee-tabla">
+        <div class="encabezado-tabla" role="row" data-i18n="tdee-tabla-niveles">Comparativa por nivel de actividad</div>
+        <div class="fila-tabla" role="row" data-factor="1.2"><span role="cell" data-i18n="nivel-sed">Sedentario</span><span role="cell"><span class="tdee-tabla-valor">0</span> kcal/d&iacute;a</span></div>
+        <div class="fila-tabla" role="row" data-factor="1.375"><span role="cell" data-i18n="nivel-lig">Ligero</span><span role="cell"><span class="tdee-tabla-valor">0</span> kcal/d&iacute;a</span></div>
+        <div class="fila-tabla" role="row" data-factor="1.55"><span role="cell" data-i18n="nivel-mod">Moderado</span><span role="cell"><span class="tdee-tabla-valor">0</span> kcal/d&iacute;a</span></div>
+        <div class="fila-tabla" role="row" data-factor="1.725"><span role="cell" data-i18n="nivel-act">Activo</span><span role="cell"><span class="tdee-tabla-valor">0</span> kcal/d&iacute;a</span></div>
+        <div class="fila-tabla" role="row" data-factor="1.9"><span role="cell" data-i18n="nivel-ext">Muy activo</span><span role="cell"><span class="tdee-tabla-valor">0</span> kcal/d&iacute;a</span></div>
+      </div>
+
+      <div class="nota-tmb" data-i18n="tdee-nota">
+        <strong>&#9432; Nota:</strong> Estas cifras son estimaciones basadas en la ecuaci&oacute;n Mifflin-St Jeor. Consulta a un profesional de la salud antes de iniciar cualquier dieta o plan de ejercicio.
+      </div>
+    </div>
+
+    <div class="info-box info-inferior">
+      <h2 class="info-box-titulo" data-i18n="tdee-importancia-titulo">¿Por qué es importante conocer tu TDEE?</h2>
+      <p class="info-box-texto" data-i18n="tdee-importancia-texto">El TDEE es la métrica más relevante para la planificación nutricional porque representa tu gasto real, no teórico. A continuación se detallan las aplicaciones prácticas de conocer tu gasto energético total:</p>
+      <ul class="info-box-lista" data-i18n="tdee-importancia-lista">
+        <li><strong>Pérdida de peso precisa</strong> — un déficit de 500 kcal diarias respecto a tu TDEE produce una pérdida aproximada de 0.5 kg por semana.</li>
+        <li><strong>Ganancia muscular controlada</strong> — un superávit de 300-500 kcal diarias proporciona la energía necesaria para la síntesis proteica.</li>
+        <li><strong>Mantenimiento sin efecto rebote</strong> — ajustar tu ingesta al TDEE exacto evita recuperar el peso perdido.</li>
+        <li><strong>Adaptación a cambios de rutina</strong> — si cambia tu actividad física, tu TDEE cambia. Recalcúlało periódicamente.</li>
+        <li><strong>Rendimiento deportivo</strong> — calcula tus necesidades calóricas exactas para cada fase de entrenamiento.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- CTA to Macros -->
+  <section class="cta-seccion" aria-label="Calcula tus macros">
+    <h2 class="cta-titulo" data-i18n="tdee-cta-titulo">¿Quieres calcular tus macros?</h2>
+    <p class="cta-desc" data-i18n="tdee-cta-desc">Distribuye tus calorías en proteínas, carbohidratos y grasas de forma personalizada.</p>
+    <div class="cta-acciones">
+      <a href="macros.html" class="btn btn-primario" data-i18n="tdee-cta-btn">Calcular Macros</a>
+      <a href="index.html" class="btn btn-secundario" data-i18n="nav-inicio">Volver al inicio</a>
+    </div>
+  </section>
+
+  <!-- Referencias -->
+  <div class="referencias" id="referencias">
+    <button class="ref-toggle" id="ref-toggle" data-i18n="ref-titulo">📚 Fuentes y referencias ▶</button>
+    <div class="ref-lista" id="ref-lista">
+      <ol>
+        <li><a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener noreferrer" data-i18n="ref-1">WHO — Obesity and overweight</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" data-i18n="ref-6">PubMed / NIH — Mifflin-St Jeor original study</a></li>
+        <li><a href="https://www.aesan.gob.es/" target="_blank" rel="noopener noreferrer" data-i18n="ref-7">AESAN — Agencia Española de Seguridad Alimentaria y Nutrición</a></li>
+        <li><a href="https://www.seen.es/calculadoras/calculadora-imc" target="_blank" rel="noopener noreferrer" data-i18n="ref-8">SEEN — Sociedad Española de Endocrinología y Nutrición</a></li>
+      </ol>
+    </div>
+  </div>
+
+</main>
+
+<footer class="pie-pagina">
+  <div class="footer-enlaces">
+    <a href="privacidad.html" data-i18n="footer-privacidad">Política de Privacidad</a>
+    <a href="cookies.html" data-i18n="footer-cookies">Política de Cookies</a>
+    <a href="aviso-legal.html" data-i18n="footer-aviso">Aviso Legal</a>
+  </div>
+  <p><small data-i18n="footer">MetriBody — 2025 — Información con fines informativos, no sustituye el consejo médico profesional.</small></p>
+</footer>
+
+<button class="herramienta btn-modo-oscuro-fijo" id="btn-modo-oscuro" title="Modo oscuro" aria-label="Alternar modo oscuro">
+  <span class="icono-modo" id="icono-modo">&#9790;</span>
+</button>
+
+<script src="scripts/script.js" defer></script>
+</body>
+</html>

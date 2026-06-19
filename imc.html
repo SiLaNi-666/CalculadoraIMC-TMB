@@ -61,10 +61,20 @@
 <nav class="navegacion-principal" aria-label="Navegación principal">
   <div class="nav-marca">MetriBody</div>
   <ul class="nav-lista">
-    <li><a href="index.html" class="nav-link" data-i18n="nav-inicio">Inicio</a></li>
-    <li><a href="imc.html" class="nav-link" aria-current="page" data-i18n="nav-imc">IMC</a></li>
+    <li><a href="index.html" class="nav-link" aria-current="page" data-i18n="nav-inicio">Inicio</a></li>
+    <li><a href="imc.html" class="nav-link" data-i18n="nav-imc">IMC</a></li>
     <li><a href="tmb.html" class="nav-link" data-i18n="nav-tmb">TMB</a></li>
-    <li><a href="index.html#faq" class="nav-link" data-i18n="nav-faq">FAQ</a></li>
+    <li class="nav-desplegable">
+      <button class="nav-link" data-i18n="nav-herramientas">Herramientas</button>
+      <ul class="nav-submenu">
+        <li><a href="imc.html" class="nav-link" data-i18n="nav-imc">IMC</a></li>
+        <li><a href="tmb.html" class="nav-link" data-i18n="nav-tmb">TMB</a></li>
+        <li><a href="macros.html" class="nav-link" data-i18n="nav-macros">Macros</a></li>
+        <li><span class="nav-link" data-i18n="nav-calorias" style="opacity:0.6">Calorías</span></li>
+        <li><span class="nav-link" data-i18n="nav-grasa" style="opacity:0.6">Grasa Corporal</span></li>
+      </ul>
+    </li>
+    <li><a href="#faq" class="nav-link" data-i18n="nav-faq">FAQ</a></li>
   </ul>
   <button class="nav-toggle" aria-label="Menú" aria-expanded="false">&#9776;</button>
 </nav>

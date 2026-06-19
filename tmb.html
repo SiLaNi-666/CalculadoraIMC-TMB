@@ -61,10 +61,20 @@
 <nav class="navegacion-principal" aria-label="Navegación principal">
   <div class="nav-marca">MetriBody</div>
   <ul class="nav-lista">
-    <li><a href="index.html" class="nav-link" data-i18n="nav-inicio">Inicio</a></li>
+    <li><a href="index.html" class="nav-link" aria-current="page" data-i18n="nav-inicio">Inicio</a></li>
     <li><a href="imc.html" class="nav-link" data-i18n="nav-imc">IMC</a></li>
-    <li><a href="tmb.html" class="nav-link" aria-current="page" data-i18n="nav-tmb">TMB</a></li>
-    <li><a href="index.html#faq" class="nav-link" data-i18n="nav-faq">FAQ</a></li>
+    <li><a href="tmb.html" class="nav-link" data-i18n="nav-tmb">TMB</a></li>
+    <li class="nav-desplegable">
+      <button class="nav-link" data-i18n="nav-herramientas">Herramientas</button>
+      <ul class="nav-submenu">
+        <li><a href="imc.html" class="nav-link" data-i18n="nav-imc">IMC</a></li>
+        <li><a href="tmb.html" class="nav-link" data-i18n="nav-tmb">TMB</a></li>
+        <li><a href="macros.html" class="nav-link" data-i18n="nav-macros">Macros</a></li>
+        <li><span class="nav-link" data-i18n="nav-calorias" style="opacity:0.6">Calorías</span></li>
+        <li><span class="nav-link" data-i18n="nav-grasa" style="opacity:0.6">Grasa Corporal</span></li>
+      </ul>
+    </li>
+    <li><a href="#faq" class="nav-link" data-i18n="nav-faq">FAQ</a></li>
   </ul>
   <button class="nav-toggle" aria-label="Menú" aria-expanded="false">&#9776;</button>
 </nav>
@@ -197,6 +207,15 @@
         </div>
       </div>
 
+      <div class="tabla-imc" role="table" aria-label="Comparativa TDEE por nivel de actividad" style="margin-bottom:16px">
+        <div class="encabezado-tabla" role="row" data-i18n="tdee-tabla-niveles">TDEE - Comparativa por nivel de actividad</div>
+        <div class="fila-tabla" role="row" data-factor="1.2"><span role="cell" data-i18n="nivel-sed">Sedentario</span><span role="cell"><span class="tdee-tabla-valor">0</span> kcal/d&iacute;a</span></div>
+        <div class="fila-tabla" role="row" data-factor="1.375"><span role="cell" data-i18n="nivel-lig">Ligero</span><span role="cell"><span class="tdee-tabla-valor">0</span> kcal/d&iacute;a</span></div>
+        <div class="fila-tabla" role="row" data-factor="1.55"><span role="cell" data-i18n="nivel-mod">Moderado</span><span role="cell"><span class="tdee-tabla-valor">0</span> kcal/d&iacute;a</span></div>
+        <div class="fila-tabla" role="row" data-factor="1.725"><span role="cell" data-i18n="nivel-act">Activo</span><span role="cell"><span class="tdee-tabla-valor">0</span> kcal/d&iacute;a</span></div>
+        <div class="fila-tabla" role="row" data-factor="1.9"><span role="cell" data-i18n="nivel-ext">Muy activo</span><span role="cell"><span class="tdee-tabla-valor">0</span> kcal/d&iacute;a</span></div>
+      </div>
+
       <div class="nota-tmb" data-i18n="tmb-nota">
         <strong>&#9432; Nota:</strong> Estas cifras son estimaciones basadas en la ecuaci&oacute;n Mifflin-St Jeor. Consulta a un profesional de la salud antes de iniciar cualquier dieta o plan de ejercicio.
       </div>
@@ -216,12 +235,12 @@
 
   </section>
 
-    <!-- CTA to IMC -->
-  <section class="cta-seccion" aria-label="Calcula tu IMC">
-    <h2 class="cta-titulo">¿Quieres calcular tu IMC?</h2>
-    <p class="cta-desc">Descubre tu Índice de Masa Corporal y conoce tu clasificación según la OMS.</p>
+  <!-- CTA to Macros -->
+  <section class="cta-seccion" aria-label="Calcula tus macros">
+    <h2 class="cta-titulo" data-i18n="tdee-cta-titulo">¿Quieres calcular tus macros?</h2>
+    <p class="cta-desc" data-i18n="tdee-cta-desc">Distribuye tus calorías en proteínas, carbohidratos y grasas de forma personalizada.</p>
     <div class="cta-acciones">
-      <a href="imc.html" class="btn btn-primario" data-i18n="hero-cta-imc">Calcular IMC</a>
+      <a href="macros.html" class="btn btn-primario" data-i18n="tdee-cta-btn">Calcular Macros</a>
       <a href="index.html" class="btn btn-secundario" data-i18n="nav-inicio">Volver al inicio</a>
     </div>
   </section>

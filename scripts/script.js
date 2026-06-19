@@ -149,7 +149,76 @@
       'footer-privacidad': 'Política de Privacidad',
       'footer-cookies': 'Política de Cookies',
       'footer-aviso': 'Aviso Legal',
-      'footer': 'MetriBody — 2025 — Información con fines informativos, no sustituye el consejo médico profesional.'
+      'footer': 'MetriBody — 2025 — Información con fines informativos, no sustituye el consejo médico profesional.',
+      // Page SEO — TDEE
+      'tdee-titulo-pagina': 'Calculadora de TDEE — Calcula tu Gasto Energético Total | MetriBody',
+      'tdee-og-titulo': 'Calculadora de TDEE gratuita — MetriBody',
+      'tdee-og-desc': 'Calcula tu TDEE al instante. Gasto Energético Total según tu actividad, déficit calórico y más.',
+      'tdee-tw-titulo': 'Calculadora de TDEE — MetriBody',
+      'tdee-tw-desc': 'Calcula tu TDEE gratis. Gasto energético total, déficit y superávit calórico.',
+      'tdee-titulo': '\u26A1 Calcula tu TDEE',
+      'tdee-desc': 'El Gasto Energético Total son las calorías que realmente necesitas cada día según tu nivel de actividad.',
+      'btn-tdee': 'Calcular TDEE',
+      'tdee-que-es-titulo': '¿Qué es el Gasto Energético Total (TDEE)?',
+      'tdee-que-es-texto': 'El <strong>Gasto Energético Total (TDEE)</strong> es la cantidad real de calorías que tu cuerpo quema en un día completo, incluyendo todas las actividades: dormir, trabajar, hacer ejercicio e incluso digerir los alimentos. Se calcula multiplicando tu <strong>Tasa Metabólica Basal (TMB)</strong> por un factor que depende de tu nivel de actividad física. Mientras la TMB representa el 60-75 % del gasto diario en reposo, el TDEE refleja el 100 % de tu gasto real. Conocer tu TDEE es esencial para cualquier plan nutricional, ya que te permite establecer un déficit controlado para perder peso, un superávit para ganar masa muscular o un mantenimiento preciso.',
+      'tdee-que-es-lista': '<li><strong>Cálculo personalizado</strong> — el TDEE se obtiene multiplicando la TMB por el factor de actividad: 1.2 (sedentario) a 1.9 (muy activo). Cada nivel refleja un estilo de vida distinto.</li><li><strong>Más preciso que la TMB sola</strong> — dos personas con la misma TMB pueden tener TDEE muy diferentes según su rutina diaria. Un atleta puede quemar el doble que una persona sedentaria.</li><li><strong>Base para cualquier objetivo</strong> — déficit (-300 a -500 kcal) para perder peso, superávit (+300 a +500 kcal) para ganar masa, o mantenimiento (TDEE exacto) para conservar el peso actual.</li>',
+      'tdee-importancia-titulo': '¿Por qué es importante conocer tu TDEE?',
+      'tdee-importancia-texto': 'El TDEE es la métrica más relevante para la planificación nutricional porque representa tu gasto real, no teórico. A continuación se detallan las aplicaciones prácticas de conocer tu gasto energético total:',
+      'tdee-importancia-lista': '<li><strong>Pérdida de peso precisa</strong> — un déficit de 500 kcal diarias respecto a tu TDEE produce una pérdida aproximada de 0.5 kg por semana, ritmo seguro y sostenible recomendado por la OMS.</li><li><strong>Ganancia muscular controlada</strong> — un superávit de 300-500 kcal diarias proporciona la energía necesaria para la síntesis proteica sin acumular exceso de grasa visceral.</li><li><strong>Mantenimiento sin efecto rebote</strong> — ajustar tu ingesta al valor exacto de tu TDEE evita recuperar el peso perdido tras una dieta hipocalórica.</li><li><strong>Adaptación a cambios de rutina</strong> — si aumentas o disminuyes tu actividad física, tu TDEE cambia. Recalcularlo periódicamente permite ajustar la dieta a tu estilo de vida actual.</li><li><strong>Rendimiento deportivo</strong> — los atletas pueden calcular sus necesidades calóricas exactas para cada fase de entrenamiento: volumen, definición o pretemporada.</li>',
+      'tdee-cta-titulo': '¿Quieres calcular tus macros?',
+      'tdee-cta-desc': 'Distribuye tus calorías en proteínas, carbohidratos y grasas de forma personalizada.',
+      'tdee-cta-btn': 'Calcular Macros',
+      // Page SEO — Macros
+      'macros-titulo-pagina': 'Calculadora de Macros — Distribuye tus Macronutrientes | MetriBody',
+      'macros-og-titulo': 'Calculadora de Macros gratuita — MetriBody',
+      'macros-og-desc': 'Calcula tus macros al instante. Distribución personalizada de proteínas, carbohidratos y grasas según tu objetivo.',
+      'macros-tw-titulo': 'Calculadora de Macros — MetriBody',
+      'macros-tw-desc': 'Calcula tus macros gratis. Proteínas, carbohidratos y grasas personalizados.',
+      'macros-titulo': '\uD83C\uDFCA Calcula tus Macros',
+      'macros-desc': 'Distribuye tus calorías diarias en proteínas, carbohidratos y grasas según tu objetivo.',
+      'btn-macros': 'Calcular Macros',
+      'macros-que-es-titulo': '¿Qué son los Macronutrientes?',
+      'macros-que-es-texto': 'Los <strong>macronutrientes</strong> son los nutrientes que el cuerpo necesita en grandes cantidades para obtener energía y mantener sus funciones vitales. Se dividen en tres categorías: <strong>proteínas</strong> (4 kcal/g), esenciales para la reparación muscular y la función inmunológica; <strong>carbohidratos</strong> (4 kcal/g), la fuente principal de energía para el cerebro y los músculos; y <strong>grasas</strong> (9 kcal/g), necesarias para la absorción de vitaminas, la producción hormonal y la salud celular. La distribución óptima de macros depende de tus objetivos: pérdida de peso, mantenimiento o ganancia muscular. La Organización Mundial de la Salud recomienda un rango de referencia de 10-35 % de proteínas, 45-65 % de carbohidratos y 20-35 % de grasas para adultos sanos.',
+      'macros-que-es-lista': '<li><strong>Proteínas (4 kcal/g)</strong> — fundamentales para la reparación de tejidos, la producción de enzimas y anticuerpos. La ingesta recomendada es de 1.2 a 2.2 g/kg de peso según el nivel de actividad.</li><li><strong>Carbohidratos (4 kcal/g)</strong> — principal fuente de energía. Los carbohidratos complejos (avena, arroz integral, legumbres) liberan energía de forma gradual y aportan fibra dietética.</li><li><strong>Grasas (9 kcal/g)</strong> — la fuente más concentrada de energía. Las grasas insaturadas (aceite de oliva, aguacate, frutos secos) son beneficiosas para la salud cardiovascular.</li>',
+      'macros-importancia-titulo': '¿Por qué es importante contar macros?',
+      'macros-importancia-texto': 'Contar macronutrientes te permite llevar un control preciso de tu alimentación más allá de las calorías totales. Cada macronutriente cumple funciones específicas que afectan directamente a tu composición corporal y rendimiento:',
+      'macros-importancia-lista': '<li><strong>Optimización de la composición corporal</strong> — una ingesta adecuada de proteínas durante un déficit calórico preserva la masa muscular mientras se pierde grasa. Con los macros incorrectos puedes perder músculo en lugar de grasa.</li><li><strong>Rendimiento físico y mental</strong> — los carbohidratos son el combustible principal del cerebro y los músculos. Una ingesta insuficiente afecta al rendimiento deportivo y la concentración.</li><li><strong>Salud hormonal y metabólica</strong> — las grasas son esenciales para la producción de hormonas como la testosterona y el estrógeno. Las dietas muy bajas en grasa pueden alterar el equilibrio hormonal.</li><li><strong>Saciedad y adherencia</strong> — las proteínas y las grasas aumentan la sensación de saciedad. Una distribución equilibrada de macros facilita mantener la dieta a largo plazo.</li><li><strong>Flexibilidad dietética</strong> — conoces tus metas de macros, puedes adaptar tu alimentación a cualquier situación (restaurantes, viajes, eventos) sin salirte del plan.</li>',
+      'macros-cta-titulo': '¿Quieres calcular tu TDEE?',
+      'macros-cta-desc': 'Descubre tu gasto energético total y comienza a planificar tu dieta.',
+      'macros-cta-btn': 'Calcular TDEE',
+      // Macros form
+      'objetivo': 'Objetivo',
+      'objetivo-deficit': 'Perder peso',
+      'objetivo-mant': 'Mantener peso',
+      'objetivo-super': 'Ganar peso',
+      'perfil-macro': 'Perfil de macros',
+      'macro-balan': 'Equilibrado',
+      'macro-lowcarb': 'Bajo en carbohidratos',
+      'macro-highprot': 'Alto en proteínas',
+      'macro-keto': 'Cetogénico',
+      'macro-highcarb': 'Alto en carbohidratos',
+      // Macros results
+      'macros-total-calorias': 'Calorías totales',
+      'macros-proteina': 'Proteínas',
+      'macros-carbohidratos': 'Carbohidratos',
+      'macros-grasa': 'Grasas',
+      'macros-gramos': 'g/día',
+      'macros-porcentaje': '%',
+      'macros-desglose': 'Desglose calórico',
+      'macros-nota': '\u276F Nota: Estas cifras son estimaciones. Las necesidades individuales pueden variar. Consulta a un profesional de la salud antes de iniciar cualquier plan nutricional.',
+      // TDEE results
+      'tdee-bmr-label': 'TMB',
+      'tdee-tdee-label': 'TDEE',
+      'tdee-tabla-niveles': 'Comparativa por nivel de actividad',
+      'tdee-tabla-nivel': 'Nivel',
+      'tdee-tabla-calorias': 'Calorías',
+      'tdee-tabla-factor': 'Factor',
+      'nivel-sed': 'Sedentario',
+      'nivel-lig': 'Ligero',
+      'nivel-mod': 'Moderado',
+      'nivel-act': 'Activo',
+      'nivel-ext': 'Muy activo',
+      'tdee-nota': '\u276F Nota: Estas cifras son estimaciones basadas en la ecuación Mifflin-St Jeor. Consulta a un profesional de la salud antes de iniciar cualquier dieta o plan de ejercicio.'
     },
     en: {
       'titulo-pagina': 'MetriBody | BMI, BMR and Body Metrics Calculator',
@@ -290,7 +359,76 @@
       'footer-privacidad': 'Privacy Policy',
       'footer-cookies': 'Cookie Policy',
       'footer-aviso': 'Legal Notice',
-      'footer': 'MetriBody — 2025 — Informational purposes only, does not substitute professional medical advice.'
+      'footer': 'MetriBody — 2025 — Informational purposes only, does not substitute professional medical advice.',
+      // Page SEO — TDEE
+      'tdee-titulo-pagina': 'TDEE Calculator — Calculate your Total Daily Energy Expenditure | MetriBody',
+      'tdee-og-titulo': 'Free TDEE Calculator — MetriBody',
+      'tdee-og-desc': 'Calculate your TDEE instantly. Total Daily Energy Expenditure based on your activity, calorie deficit and more.',
+      'tdee-tw-titulo': 'TDEE Calculator — MetriBody',
+      'tdee-tw-desc': 'Calculate your TDEE free. Total daily energy expenditure, deficit and calorie surplus.',
+      'tdee-titulo': '\u26A1 Calculate your TDEE',
+      'tdee-desc': 'Total Daily Energy Expenditure is the calories you actually need each day based on your activity level.',
+      'btn-tdee': 'Calculate TDEE',
+      'tdee-que-es-titulo': 'What is Total Daily Energy Expenditure (TDEE)?',
+      'tdee-que-es-texto': '<strong>Total Daily Energy Expenditure (TDEE)</strong> is the actual amount of calories your body burns in a full day, including all activities: sleeping, working, exercising, and even digesting food. It is calculated by multiplying your <strong>Basal Metabolic Rate (BMR)</strong> by a factor that depends on your physical activity level. While BMR accounts for 60-75 % of daily expenditure at rest, TDEE reflects 100 % of your actual expenditure. Knowing your TDEE is essential for any nutritional plan, as it allows you to establish a controlled deficit for weight loss, a surplus for muscle gain, or precise maintenance.',
+      'tdee-que-es-lista': '<li><strong>Personalized calculation</strong> — TDEE is obtained by multiplying BMR by the activity factor: 1.2 (sedentary) to 1.9 (very active). Each level reflects a different lifestyle.</li><li><strong>More accurate than BMR alone</strong> — two people with the same BMR can have very different TDEEs depending on their daily routine. An athlete can burn twice as much as a sedentary person.</li><li><strong>Foundation for any goal</strong> — deficit (-300 to -500 kcal) to lose weight, surplus (+300 to +500 kcal) to gain mass, or maintenance (exact TDEE) to keep current weight.</li>',
+      'tdee-importancia-titulo': 'Why is it important to know your TDEE?',
+      'tdee-importancia-texto': 'TDEE is the most relevant metric for nutritional planning because it represents your actual, not theoretical, expenditure. Below are the practical applications of knowing your total energy expenditure:',
+      'tdee-importancia-lista': '<li><strong>Precise weight loss</strong> — a deficit of 500 kcal per day relative to your TDEE produces an approximate loss of 0.5 kg (1 lb) per week, a safe and sustainable rate recommended by WHO.</li><li><strong>Controlled muscle gain</strong> — a surplus of 300-500 kcal per day provides the energy needed for protein synthesis without accumulating excess visceral fat.</li><li><strong>Maintenance without rebound</strong> — adjusting your intake to your exact TDEE prevents regaining weight after a hypocaloric diet.</li><li><strong>Adaptation to routine changes</strong> — if you increase or decrease your physical activity, your TDEE changes. Recalculating periodically allows you to adjust your diet to your current lifestyle.</li><li><strong>Athletic performance</strong> — athletes can calculate their exact caloric needs for each training phase: bulking, cutting, or preseason.</li>',
+      'tdee-cta-titulo': 'Want to calculate your macros?',
+      'tdee-cta-desc': 'Distribute your calories into proteins, carbs and fats in a personalized way.',
+      'tdee-cta-btn': 'Calculate Macros',
+      // Page SEO — Macros
+      'macros-titulo-pagina': 'Macros Calculator — Distribute your Macronutrients | MetriBody',
+      'macros-og-titulo': 'Free Macros Calculator — MetriBody',
+      'macros-og-desc': 'Calculate your macros instantly. Personalized distribution of proteins, carbs and fats based on your goal.',
+      'macros-tw-titulo': 'Macros Calculator — MetriBody',
+      'macros-tw-desc': 'Calculate your macros free. Personalized proteins, carbs and fats.',
+      'macros-titulo': '\uD83C\uDFCA Calculate your Macros',
+      'macros-desc': 'Distribute your daily calories into proteins, carbs and fats based on your goal.',
+      'btn-macros': 'Calculate Macros',
+      'macros-que-es-titulo': 'What are Macronutrients?',
+      'macros-que-es-texto': '<strong>Macronutrients</strong> are the nutrients the body needs in large amounts to obtain energy and maintain vital functions. They are divided into three categories: <strong>proteins</strong> (4 kcal/g), essential for muscle repair and immune function; <strong>carbohydrates</strong> (4 kcal/g), the main energy source for the brain and muscles; and <strong>fats</strong> (9 kcal/g), necessary for vitamin absorption, hormone production, and cell health. The optimal macro distribution depends on your goals: weight loss, maintenance, or muscle gain. The World Health Organization recommends a reference range of 10-35 % protein, 45-65 % carbohydrates, and 20-35 % fats for healthy adults.',
+      'macros-que-es-lista': '<li><strong>Protein (4 kcal/g)</strong> — essential for tissue repair, enzyme production, and antibodies. Recommended intake is 1.2 to 2.2 g/kg of body weight depending on activity level.</li><li><strong>Carbohydrates (4 kcal/g)</strong> — main energy source. Complex carbohydrates (oats, brown rice, legumes) release energy gradually and provide dietary fiber.</li><li><strong>Fats (9 kcal/g)</strong> — the most concentrated energy source. Unsaturated fats (olive oil, avocado, nuts) are beneficial for cardiovascular health.</li>',
+      'macros-importancia-titulo': 'Why is counting macros important?',
+      'macros-importancia-texto': 'Counting macronutrients allows you to have precise control over your diet beyond total calories. Each macronutrient fulfills specific functions that directly affect your body composition and performance:',
+      'macros-importancia-lista': '<li><strong>Body composition optimization</strong> — adequate protein intake during a caloric deficit preserves muscle mass while losing fat. With incorrect macros you can lose muscle instead of fat.</li><li><strong>Physical and mental performance</strong> — carbohydrates are the main fuel for the brain and muscles. Insufficient intake affects athletic performance and concentration.</li><li><strong>Hormonal and metabolic health</strong> — fats are essential for hormone production like testosterone and estrogen. Very low-fat diets can disrupt hormonal balance.</li><li><strong>Satiety and adherence</strong> — proteins and fats increase the feeling of fullness. A balanced macro distribution makes it easier to maintain the diet long-term.</li><li><strong>Dietary flexibility</strong> — knowing your macro goals allows you to adapt your eating to any situation (restaurants, travel, events) without leaving the plan.</li>',
+      'macros-cta-titulo': 'Want to calculate your TDEE?',
+      'macros-cta-desc': 'Discover your total energy expenditure and start planning your diet.',
+      'macros-cta-btn': 'Calculate TDEE',
+      // Macros form
+      'objetivo': 'Goal',
+      'objetivo-deficit': 'Lose weight',
+      'objetivo-mant': 'Maintain weight',
+      'objetivo-super': 'Gain weight',
+      'perfil-macro': 'Macro profile',
+      'macro-balan': 'Balanced',
+      'macro-lowcarb': 'Low carb',
+      'macro-highprot': 'High protein',
+      'macro-keto': 'Ketogenic',
+      'macro-highcarb': 'High carb',
+      // Macros results
+      'macros-total-calorias': 'Total calories',
+      'macros-proteina': 'Protein',
+      'macros-carbohidratos': 'Carbs',
+      'macros-grasa': 'Fats',
+      'macros-gramos': 'g/day',
+      'macros-porcentaje': '%',
+      'macros-desglose': 'Calorie breakdown',
+      'macros-nota': '\u276F Note: These figures are estimates. Individual needs may vary. Consult a healthcare professional before starting any nutritional plan.',
+      // TDEE results
+      'tdee-bmr-label': 'BMR',
+      'tdee-tdee-label': 'TDEE',
+      'tdee-tabla-niveles': 'Comparison by activity level',
+      'tdee-tabla-nivel': 'Level',
+      'tdee-tabla-calorias': 'Calories',
+      'tdee-tabla-factor': 'Factor',
+      'nivel-sed': 'Sedentary',
+      'nivel-lig': 'Light',
+      'nivel-mod': 'Moderate',
+      'nivel-act': 'Active',
+      'nivel-ext': 'Very active',
+      'tdee-nota': '\u276F Note: These figures are estimates based on the Mifflin-St Jeor equation. Consult a healthcare professional before starting any diet or exercise plan.'
     }
   };
 
@@ -426,6 +564,56 @@
   var refLista = document.getElementById('ref-lista');
   var navToggle = document.querySelector('.nav-toggle');
   var navLista = document.querySelector('.nav-lista');
+
+  // TDEE DOM refs
+  var formularioTDEE = document.getElementById('formulario-tdee');
+  var pesoTDEE = document.getElementById('peso-tdee');
+  var alturaTDEE = document.getElementById('altura-tdee');
+  var edadTDEE = document.getElementById('edad-tdee');
+  var radiosSexoTDEE = document.querySelectorAll('input[name="sexo-tdee"]');
+  var actividadTDEE = document.getElementById('actividad-tdee');
+  var resultadoTDEE = document.getElementById('resultado-tdee');
+  var tdeeBMRValor = document.getElementById('tdee-bmr-valor');
+  var tdeeTDEEValor = document.getElementById('tdee-tdee-valor');
+  var tdeeDeficitValor = document.getElementById('tdee-deficit-valor');
+  var tdeePerdidaValor = document.getElementById('tdee-perdida-valor');
+  var tdeeMantValor = document.getElementById('tdee-mant-valor');
+  var tdeeSuperavitValor = document.getElementById('tdee-superavit-valor');
+  var tdeeGananciaValor = document.getElementById('tdee-ganancia-valor');
+  var tdeeTablaValores = document.querySelectorAll('.tdee-tabla-valor');
+  var tdeeUnidadPerdida = document.getElementById('tdee-unidad-perdida');
+  var tdeeUnidadGanancia = document.getElementById('tdee-unidad-ganancia');
+
+  // Macros DOM refs
+  var formularioMacros = document.getElementById('formulario-macros');
+  var pesoMacros = document.getElementById('peso-macros');
+  var alturaMacros = document.getElementById('altura-macros');
+  var edadMacros = document.getElementById('edad-macros');
+  var radiosSexoMacros = document.querySelectorAll('input[name="sexo-macros"]');
+  var actividadMacros = document.getElementById('actividad-macros');
+  var objetivoMacros = document.getElementById('objetivo-macros');
+  var perfilMacros = document.getElementById('perfil-macros');
+  var resultadoMacros = document.getElementById('resultado-macros');
+  var macrosCaloriasValor = document.getElementById('macros-calorias-valor');
+  var macrosObjetivoLabel = document.getElementById('macros-objetivo-label');
+  var macrosProteinaValor = document.getElementById('macros-proteina-valor');
+  var macrosProteinaPct = document.getElementById('macros-proteina-pct');
+  var macrosCarbsValor = document.getElementById('macros-carbohidratos-valor');
+  var macrosCarbsPct = document.getElementById('macros-carbohidratos-pct');
+  var macrosGrasaValor = document.getElementById('macros-grasa-valor');
+  var macrosGrasaPct = document.getElementById('macros-grasa-pct');
+  var macrosBarPro = document.getElementById('macros-bar-pro');
+  var macrosBarCarbs = document.getElementById('macros-bar-carbs');
+  var macrosBarFat = document.getElementById('macros-bar-fat');
+
+  var unidadPesoTDEE = document.getElementById('unidad-peso-tdee');
+  var unidadAlturaTDEE = document.getElementById('unidad-altura-tdee');
+  var unidadInputPesoTDEE = document.getElementById('unidad-input-peso-tdee');
+  var unidadInputAlturaTDEE = document.getElementById('unidad-input-altura-tdee');
+  var unidadPesoMacros = document.getElementById('unidad-peso-macros');
+  var unidadAlturaMacros = document.getElementById('unidad-altura-macros');
+  var unidadInputPesoMacros = document.getElementById('unidad-input-peso-macros');
+  var unidadInputAlturaMacros = document.getElementById('unidad-input-altura-macros');
 
   var faqTrack = document.getElementById('faq-track');
   var faqPrev = document.getElementById('faq-prev');
@@ -592,14 +780,28 @@
     if (unidadAlturaTMB) unidadAlturaTMB.textContent = etiqAltura;
     if (unidadInputPesoTMB) unidadInputPesoTMB.textContent = uPeso;
     if (unidadInputAlturaTMB) unidadInputAlturaTMB.textContent = uAltura;
+    if (unidadPesoTDEE) unidadPesoTDEE.textContent = etiqPeso;
+    if (unidadAlturaTDEE) unidadAlturaTDEE.textContent = etiqAltura;
+    if (unidadInputPesoTDEE) unidadInputPesoTDEE.textContent = uPeso;
+    if (unidadInputAlturaTDEE) unidadInputAlturaTDEE.textContent = uAltura;
+    if (unidadPesoMacros) unidadPesoMacros.textContent = etiqPeso;
+    if (unidadAlturaMacros) unidadAlturaMacros.textContent = etiqAltura;
+    if (unidadInputPesoMacros) unidadInputPesoMacros.textContent = uPeso;
+    if (unidadInputAlturaMacros) unidadInputAlturaMacros.textContent = uAltura;
 
     if (pesoIMC) pesoIMC.placeholder = phPeso;
     if (pesoTMB) pesoTMB.placeholder = phPeso;
+    if (pesoTDEE) pesoTDEE.placeholder = phPeso;
+    if (pesoMacros) pesoMacros.placeholder = phPeso;
     if (alturaIMC) alturaIMC.placeholder = phAltura;
     if (alturaTMB) alturaTMB.placeholder = phAltura;
+    if (alturaTDEE) alturaTDEE.placeholder = phAltura;
+    if (alturaMacros) alturaMacros.placeholder = phAltura;
 
     if (unidadPerdida) unidadPerdida.textContent = uPerdida;
     if (unidadGanancia) unidadGanancia.textContent = uPerdida;
+    if (tdeeUnidadPerdida) tdeeUnidadPerdida.textContent = uPerdida;
+    if (tdeeUnidadGanancia) tdeeUnidadGanancia.textContent = uPerdida;
   }
 
   // ==========================================
@@ -812,6 +1014,146 @@
       superavitValor.textContent = superavit + ' kcal';
       perdidaValor.textContent = Math.abs(perdida).toFixed(2);
       gananciaValor.textContent = ganancia.toFixed(2);
+
+      var factores = [1.2, 1.375, 1.55, 1.725, 1.9];
+      tdeeTablaValores.forEach(function (el, i) {
+        el.textContent = Math.round(tmb * factores[i]);
+      });
+    });
+  }
+
+  // ==========================================
+  // Formulario TDEE
+  // ==========================================
+
+  if (formularioTDEE) {
+    formularioTDEE.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var esImperial = unidadesActual === 'imperial';
+      var peso = obtenerValorEntrada(pesoTDEE, esImperial, true);
+      var altura = obtenerValorEntrada(alturaTDEE, esImperial, false);
+      var edad = aNumero(edadTDEE.value);
+      var sexo = (function () {
+        var val = 'hombre';
+        radiosSexoTDEE.forEach(function (r) { if (r.checked) val = r.value; });
+        return val;
+      })();
+      var factor = aNumero(actividadTDEE.value);
+
+      if (!peso || !altura || !edad || peso <= 0 || altura <= 0 || edad <= 0) {
+        mostrarError(formularioTDEE, idiomaActual === 'en' ? 'Please fill all fields with valid values.' : 'Por favor, completa todos los campos.');
+        return;
+      }
+
+      var tmb = Math.round(calcularTMB(peso, altura, edad, sexo));
+      var tdee = Math.round(tmb * factor);
+      var deficit = Math.round(tdee - 500);
+      var perdida = cambioSemanal(-500);
+      var superavit = Math.round(tdee + 500);
+      var ganancia = cambioSemanal(500);
+
+      resultadoTDEE.style.display = 'block';
+      resultadoTDEE.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      animarContador(tdeeBMRValor, 0, tmb, 1000, 0);
+      animarContador(tdeeTDEEValor, 0, tdee, 1200, 0);
+
+      tdeeDeficitValor.textContent = deficit + ' kcal';
+      tdeeMantValor.textContent = tdee + ' kcal';
+      tdeeSuperavitValor.textContent = superavit + ' kcal';
+      tdeePerdidaValor.textContent = Math.abs(perdida).toFixed(2);
+      tdeeGananciaValor.textContent = ganancia.toFixed(2);
+
+      var factores = [1.2, 1.375, 1.55, 1.725, 1.9];
+      tdeeTablaValores.forEach(function (el, i) {
+        el.textContent = Math.round(tmb * factores[i]);
+      });
+    });
+  }
+
+  // ==========================================
+  // Formulario Macros
+  // ==========================================
+
+  var PERFILES_MACRO = {
+    balan:    { p: 1.5, f: 0.75 },
+    lowcarb:  { p: 1.8, f: 1.0 },
+    highprot: { p: 1.8, f: 0.6 },
+    keto:     { p: 1.2, f: 1.0 },
+    highcarb: { p: 1.5, f: 0.5 }
+  };
+
+  if (formularioMacros) {
+    formularioMacros.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var esImperial = unidadesActual === 'imperial';
+      var peso = obtenerValorEntrada(pesoMacros, esImperial, true);
+      var altura = obtenerValorEntrada(alturaMacros, esImperial, false);
+      var edad = aNumero(edadMacros.value);
+      var sexo = (function () {
+        var val = 'hombre';
+        radiosSexoMacros.forEach(function (r) { if (r.checked) val = r.value; });
+        return val;
+      })();
+      var factor = aNumero(actividadMacros.value);
+      var objetivo = objetivoMacros.value;
+      var perfil = perfilMacros.value;
+
+      if (!peso || !altura || !edad || peso <= 0 || altura <= 0 || edad <= 0) {
+        mostrarError(formularioMacros, idiomaActual === 'en' ? 'Please fill all fields with valid values.' : 'Por favor, completa todos los campos.');
+        return;
+      }
+
+      var tmb = calcularTMB(peso, altura, edad, sexo);
+      var tdee = Math.round(tmb * factor);
+
+      var ajuste = 0;
+      if (objetivo === 'deficit') ajuste = -500;
+      else if (objetivo === 'super') ajuste = 500;
+
+      var calorias = tdee + ajuste;
+      if (calorias < 800) calorias = 800;
+
+      var perfs = PERFILES_MACRO[perfil] || PERFILES_MACRO.balan;
+
+      var proteinasG = Math.round(perfs.p * peso);
+      var grasasG = Math.round(perfs.f * peso);
+
+      var calProteina = proteinasG * 4;
+      var calGrasa = grasasG * 9;
+      var calCarbs = calorias - calProteina - calGrasa;
+      if (calCarbs < 0) calCarbs = 0;
+      var carbsG = Math.round(calCarbs / 4);
+
+      var caloriasReales = calProteina + (carbsG * 4) + calGrasa;
+
+      var proteinasPct = Math.round((calProteina / caloriasReales) * 100);
+      var carbsPct = Math.round(((carbsG * 4) / caloriasReales) * 100);
+      var grasasPct = Math.round((calGrasa / caloriasReales) * 100);
+
+      // Adjust for rounding so proportions always sum to 100
+      var sumaPct = proteinasPct + carbsPct + grasasPct;
+      if (sumaPct < 100) carbsPct += 100 - sumaPct;
+      else if (sumaPct > 100) carbsPct -= sumaPct - 100;
+
+      resultadoMacros.style.display = 'block';
+      resultadoMacros.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      animarContador(macrosCaloriasValor, 0, caloriasReales, 1000, 0);
+
+      macrosProteinaValor.textContent = proteinasG;
+      macrosCarbsValor.textContent = carbsG;
+      macrosGrasaValor.textContent = grasasG;
+
+      macrosProteinaPct.textContent = proteinasPct;
+      macrosCarbsPct.textContent = carbsPct;
+      macrosGrasaPct.textContent = grasasPct;
+
+      macrosBarPro.style.width = proteinasPct + '%';
+      macrosBarCarbs.style.width = carbsPct + '%';
+      macrosBarFat.style.width = grasasPct + '%';
     });
   }
 
