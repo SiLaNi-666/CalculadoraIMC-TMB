@@ -11,11 +11,11 @@
 
   var IDIOMAS = {
     es: {
-      'titulo-pagina': 'Calculadora IMC y TMB — Calcula tu Índice de Masa Corporal y Tasa Metabólica Basal',
-      'og-titulo': 'Calculadora IMC y TMB — Gratuita y con medidor animado',
-      'og-desc': 'Calcula tu IMC y TMB al instante. Obtén tu clasificación según la OMS con un medidor visual interactivo.',
-      'tw-titulo': 'Calculadora IMC y TMB',
-      'tw-desc': 'Calcula tu IMC y TMB con medidor animado. Clasificación OMS, déficit y superávit calórico.',
+      'titulo-pagina': 'MetriBody | Calculadora IMC, TMB y Métricas Corporales',
+      'og-titulo': 'MetriBody — Calculadora IMC y TMB gratis con medidor animado',
+      'og-desc': 'Calcula tu IMC, TMB, TDEE y métricas corporales al instante. Clasificación OMS, medidor interactivo y déficit calórico.',
+      'tw-titulo': 'MetriBody — Calculadora IMC y TMB',
+      'tw-desc': 'Calcula tu IMC, TMB y más con medidor animado. Clasificación OMS y déficit calórico.',
       'titulo': 'Calculadora de IMC & TMB',
       'subtitulo': 'Conoce tu Índice de Masa Corporal y Tasa Metabólica Basal',
       'metrico': 'Métrico',
@@ -83,14 +83,80 @@
       'ref-6': 'PubMed / NIH — Mifflin-St Jeor original study (Am J Clin Nutr, 1990)',
       'ref-7': 'AESAN — Agencia Española de Seguridad Alimentaria y Nutrición',
       'ref-8': 'SEEN — Sociedad Española de Endocrinología y Nutrición',
-      'footer': 'Calculadora IMC & TMB — 2025 — Información con fines informativos, no sustituye el consejo médico profesional.'
+      // Nav
+      'nav-inicio': 'Inicio',
+      'nav-imc': 'IMC',
+      'nav-tmb': 'TMB',
+      'nav-herramientas': 'Herramientas',
+      'herramientas-titulo': 'Herramientas',
+      'nav-tdee': 'TDEE',
+      'nav-macros': 'Macros',
+      'nav-calorias': 'Calorías',
+      'nav-grasa': 'Grasa Corporal',
+      'nav-faq': 'FAQ',
+      // Page SEO — IMC
+      'imc-titulo-pagina': 'Calculadora de IMC — Calcula tu Índice de Masa Corporal | MetriBody',
+      'imc-og-titulo': 'Calculadora de IMC gratuita — MetriBody',
+      'imc-og-desc': 'Calcula tu IMC al instante. Clasificación OMS con medidor animado, peso saludable y más.',
+      'imc-tw-titulo': 'Calculadora de IMC — MetriBody',
+      'imc-tw-desc': 'Calcula tu IMC gratis. Clasificación OMS y medidor animado.',
+      // Page SEO — TMB
+      'tmb-titulo-pagina': 'Calculadora de TMB — Calcula tu Tasa Metabólica Basal | MetriBody',
+      'tmb-og-titulo': 'Calculadora de TMB gratuita — MetriBody',
+      'tmb-og-desc': 'Calcula tu TMB y TDEE gratis. Ecuación Mifflin-St Jeor, déficit calórico y más.',
+      'tmb-tw-titulo': 'Calculadora de TMB — MetriBody',
+      'tmb-tw-desc': 'Calcula tu TMB gratis. TDEE, déficit y superávit calórico.',
+      // Hero
+      'hero-titulo': 'Tu centro de métricas corporales completo',
+      'hero-subtitulo': 'Calcula tu IMC, TMB, TDEE y más. Herramientas gratuitas basadas en evidencia científica para conocer tu cuerpo.',
+      'hero-cta-imc': 'Calcular IMC',
+      'hero-cta-tmb': 'Calcular TMB',
+      // Tool cards
+      'tarjeta-imc-titulo': 'Calculadora de IMC',
+      'tarjeta-imc-desc': 'Índice de Masa Corporal — clasificación OMS con medidor animado.',
+      'tarjeta-tmb-titulo': 'Calculadora de TMB',
+      'tarjeta-tmb-desc': 'Tasa Metabólica Basal — calorías en reposo con ecuación Mifflin-St Jeor.',
+      'tarjeta-tdee-titulo': 'Calculadora TDEE',
+      'tarjeta-tdee-desc': 'Gasto Energético Total — descubre tus calorías diarias reales según tu actividad.',
+      'tarjeta-macros-titulo': 'Calculadora de Macros',
+      'tarjeta-macros-desc': 'Distribución de macronutrientes — proteínas, carbohidratos y grasas personalizados.',
+      'tarjeta-calorias-titulo': 'Calculadora de Calorías',
+      'tarjeta-calorias-desc': 'Necesidades calóricas diarias — déficit, mantenimiento y superávit.',
+      'tarjeta-grasa-titulo': 'Grasa Corporal',
+      'tarjeta-grasa-desc': 'Porcentaje de grasa corporal — estimación por pliegues cutáneos y perímetros.',
+      'proximamente': 'Próximamente',
+      // FAQ
+      'faq-titulo': 'Preguntas Frecuentes',
+      'faq-q1': '¿Qué es el IMC y cómo se calcula?',
+      'faq-a1': 'El Índice de Masa Corporal (IMC) es una medida que relaciona tu peso y altura mediante la fórmula: peso (kg) / altura² (m). Se usa como herramienta de cribado para clasificar el peso en adultos según los rangos establecidos por la OMS.',
+      'faq-q2': '¿Qué es la TMB y por qué es importante?',
+      'faq-a2': 'La Tasa Metabólica Basal (TMB) son las calorías que tu cuerpo quema en reposo absoluto para mantener funciones vitales. Conocerla es el primer paso para diseñar una dieta personalizada, ya que representa entre el 60-75 % del gasto energético total.',
+      'faq-q3': '¿Cuál es la diferencia entre IMC y TMB?',
+      'faq-a3': 'El IMC mide la relación entre peso y altura para evaluar si tu peso es saludable. La TMB mide la energía que consumes en reposo. Mientras el IMC te dice "cómo estás", la TMB te dice "cuánta energía necesitas". Son herramientas complementarias.',
+      'faq-q4': '¿Cómo puedo calcular mi déficit calórico?',
+      'faq-a4': 'Primero calcula tu TMB, multiplícala por tu factor de actividad para obtener tu TDEE, y resta 300-500 kcal. Ese rango es un déficit seguro para perder peso de forma gradual sin perder masa muscular significativa.',
+      'faq-q5': '¿El IMC es fiable para deportistas?',
+      'faq-a5': 'El IMC tiene limitaciones en personas con alta masa muscular, ya que no distingue entre peso magro y graso. Un deportista puede tener un IMC alto sin tener exceso de grasa. En estos casos se recomienda complementar con medición de pliegues o bioimpedancia.',
+      'faq-q6': '¿Con qué frecuencia debo calcular mi IMC o TMB?',
+      'faq-a6': 'El IMC puede calcularse mensualmente o al cambiar significativamente de peso. La TMB solo cambia con variaciones importantes en la composición corporal o edad, por lo que basta con recalcularla cada 3-6 meses.',
+      // CTA
+      'cta-titulo': 'Comienza a conocerte mejor',
+      'cta-desc': 'Usa nuestras herramientas gratuitas para calcular tu IMC y TMB al instante. Sin registro, sin complicaciones.',
+      'cta-btn-imc': 'Calcular mi IMC',
+      'cta-btn-tmb': 'Calcular mi TMB',
+      // Footer
+      'footer-enlaces': 'Enlaces',
+      'footer-privacidad': 'Política de Privacidad',
+      'footer-cookies': 'Política de Cookies',
+      'footer-aviso': 'Aviso Legal',
+      'footer': 'MetriBody — 2025 — Información con fines informativos, no sustituye el consejo médico profesional.'
     },
     en: {
-      'titulo-pagina': 'BMI and BMR Calculator — Calculate your Body Mass Index and Basal Metabolic Rate',
-      'og-titulo': 'BMI and BMR Calculator — Free with animated gauge',
-      'og-desc': 'Calculate your BMI and BMR instantly. Get WHO classification with an interactive animated gauge.',
-      'tw-titulo': 'BMI and BMR Calculator',
-      'tw-desc': 'Calculate your BMI and BMR with animated gauge. WHO classification, calorie deficit and surplus.',
+      'titulo-pagina': 'MetriBody | BMI, BMR and Body Metrics Calculator',
+      'og-titulo': 'MetriBody — Free BMI and BMR Calculator with animated gauge',
+      'og-desc': 'Calculate your BMI, BMR, TDEE and body metrics instantly. WHO classification, interactive gauge and calorie deficit.',
+      'tw-titulo': 'MetriBody — BMI and BMR Calculator',
+      'tw-desc': 'Calculate your BMI, BMR and more with animated gauge. WHO classification and calorie deficit.',
       'titulo': 'BMI & BMR Calculator',
       'subtitulo': 'Know your Body Mass Index and Basal Metabolic Rate',
       'metrico': 'Metric',
@@ -158,7 +224,73 @@
       'ref-6': 'PubMed / NIH — Mifflin-St Jeor original study (Am J Clin Nutr, 1990)',
       'ref-7': 'AESAN — Spanish Agency for Food Safety and Nutrition',
       'ref-8': 'SEEN — Spanish Society of Endocrinology and Nutrition',
-      'footer': 'BMI & BMR Calculator — 2025 — Informational purposes only, does not substitute professional medical advice.'
+      // Nav
+      'nav-inicio': 'Home',
+      'nav-imc': 'BMI',
+      'nav-tmb': 'BMR',
+      'nav-herramientas': 'Tools',
+      'herramientas-titulo': 'Tools',
+      'nav-tdee': 'TDEE',
+      'nav-macros': 'Macros',
+      'nav-calorias': 'Calories',
+      'nav-grasa': 'Body Fat',
+      'nav-faq': 'FAQ',
+      // Page SEO — IMC
+      'imc-titulo-pagina': 'BMI Calculator — Calculate your Body Mass Index | MetriBody',
+      'imc-og-titulo': 'Free BMI Calculator — MetriBody',
+      'imc-og-desc': 'Calculate your BMI instantly. WHO classification with animated gauge, healthy weight and more.',
+      'imc-tw-titulo': 'BMI Calculator — MetriBody',
+      'imc-tw-desc': 'Calculate your BMI free. WHO classification and animated gauge.',
+      // Page SEO — TMB
+      'tmb-titulo-pagina': 'BMR Calculator — Calculate your Basal Metabolic Rate | MetriBody',
+      'tmb-og-titulo': 'Free BMR Calculator — MetriBody',
+      'tmb-og-desc': 'Calculate your BMR and TDEE free. Mifflin-St Jeor equation, calorie deficit and more.',
+      'tmb-tw-titulo': 'BMR Calculator — MetriBody',
+      'tmb-tw-desc': 'Calculate your BMR free. TDEE, deficit and calorie surplus.',
+      // Hero
+      'hero-titulo': 'Your complete body metrics hub',
+      'hero-subtitulo': 'Calculate your BMI, BMR, TDEE and more. Free evidence-based tools to understand your body.',
+      'hero-cta-imc': 'Calculate BMI',
+      'hero-cta-tmb': 'Calculate BMR',
+      // Tool cards
+      'tarjeta-imc-titulo': 'BMI Calculator',
+      'tarjeta-imc-desc': 'Body Mass Index — WHO classification with animated gauge.',
+      'tarjeta-tmb-titulo': 'BMR Calculator',
+      'tarjeta-tmb-desc': 'Basal Metabolic Rate — resting calories with Mifflin-St Jeor equation.',
+      'tarjeta-tdee-titulo': 'TDEE Calculator',
+      'tarjeta-tdee-desc': 'Total Daily Energy Expenditure — your real daily calorie needs.',
+      'tarjeta-macros-titulo': 'Macros Calculator',
+      'tarjeta-macros-desc': 'Macronutrient distribution — proteins, carbs and fats tailored for you.',
+      'tarjeta-calorias-titulo': 'Calorie Calculator',
+      'tarjeta-calorias-desc': 'Daily calorie needs — deficit, maintenance and surplus.',
+      'tarjeta-grasa-titulo': 'Body Fat Calculator',
+      'tarjeta-grasa-desc': 'Body fat percentage — estimation by skinfolds and circumferences.',
+      'proximamente': 'Coming Soon',
+      // FAQ
+      'faq-titulo': 'Frequently Asked Questions',
+      'faq-q1': 'What is BMI and how is it calculated?',
+      'faq-a1': 'Body Mass Index (BMI) is a measure that relates your weight and height using the formula: weight (kg) / height² (m). It is used as a screening tool to classify weight in adults according to WHO-established ranges.',
+      'faq-q2': 'What is BMR and why is it important?',
+      'faq-a2': 'Basal Metabolic Rate (BMR) is the calories your body burns at complete rest to maintain vital functions. Knowing it is the first step in designing a personalized diet, as it represents 60-75 % of total energy expenditure.',
+      'faq-q3': 'What is the difference between BMI and BMR?',
+      'faq-a3': 'BMI measures the relationship between weight and height to assess whether your weight is healthy. BMR measures the energy you consume at rest. While BMI tells you "how you are", BMR tells you "how much energy you need". They are complementary tools.',
+      'faq-q4': 'How do I calculate my calorie deficit?',
+      'faq-a4': 'First calculate your BMR, multiply it by your activity factor to get your TDEE, then subtract 300-500 kcal. This range is a safe deficit for gradual weight loss without significant muscle loss.',
+      'faq-q5': 'Is BMI reliable for athletes?',
+      'faq-a5': 'BMI has limitations in people with high muscle mass, as it does not distinguish between lean and fat mass. An athlete may have a high BMI without excess fat. In these cases, skinfold measurement or bioimpedance is recommended.',
+      'faq-q6': 'How often should I calculate my BMI or BMR?',
+      'faq-a6': 'BMI can be calculated monthly or when you experience significant weight changes. BMR only changes with major variations in body composition or age, so recalculating every 3-6 months is sufficient.',
+      // CTA
+      'cta-titulo': 'Start getting to know yourself better',
+      'cta-desc': 'Use our free tools to calculate your BMI and BMR instantly. No registration, no hassle.',
+      'cta-btn-imc': 'Calculate my BMI',
+      'cta-btn-tmb': 'Calculate my BMR',
+      // Footer
+      'footer-enlaces': 'Links',
+      'footer-privacidad': 'Privacy Policy',
+      'footer-cookies': 'Cookie Policy',
+      'footer-aviso': 'Legal Notice',
+      'footer': 'MetriBody — 2025 — Informational purposes only, does not substitute professional medical advice.'
     }
   };
 
@@ -292,6 +424,14 @@
   var unidadGanancia = document.getElementById('unidad-ganancia');
   var refToggle = document.getElementById('ref-toggle');
   var refLista = document.getElementById('ref-lista');
+  var navToggle = document.querySelector('.nav-toggle');
+  var navLista = document.querySelector('.nav-lista');
+
+  var faqTrack = document.getElementById('faq-track');
+  var faqPrev = document.getElementById('faq-prev');
+  var faqNext = document.getElementById('faq-next');
+  var faqSlides = faqTrack ? faqTrack.querySelectorAll('.faq-slide') : [];
+  var faqIndex = 0;
 
   var medidorInicializado = false;
 
@@ -313,6 +453,16 @@
         refToggle.innerHTML = IDIOMAS[idiomaActual]['ref-titulo'] + (expanded ? ' \u25B6' : ' \u25BC');
       });
     }
+
+    if (navToggle && navLista) {
+      navToggle.addEventListener('click', function () {
+        var expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !expanded);
+        navLista.classList.toggle('visible');
+      });
+    }
+
+    initFaqSlider();
   }
 
   // ==========================================
@@ -557,48 +707,50 @@
   // Formulario IMC
   // ==========================================
 
-  formularioIMC.addEventListener('submit', function (e) {
-    e.preventDefault();
+  if (formularioIMC) {
+    formularioIMC.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    var esImperial = unidadesActual === 'imperial';
-    var peso = obtenerValorEntrada(pesoIMC, esImperial, true);
-    var altura = obtenerValorEntrada(alturaIMC, esImperial, false);
+      var esImperial = unidadesActual === 'imperial';
+      var peso = obtenerValorEntrada(pesoIMC, esImperial, true);
+      var altura = obtenerValorEntrada(alturaIMC, esImperial, false);
 
-    if (!peso || !altura || peso <= 0 || altura <= 0) {
-      mostrarError(formularioIMC, idiomaActual === 'en' ? 'Please enter valid values.' : 'Por favor, introduce valores v\u00e1lidos.');
-      return;
-    }
+      if (!peso || !altura || peso <= 0 || altura <= 0) {
+        mostrarError(formularioIMC, idiomaActual === 'en' ? 'Please enter valid values.' : 'Por favor, introduce valores v\u00e1lidos.');
+        return;
+      }
 
-    var imc = calcularIMC(peso, altura);
-    var imcR = Math.round(imc * 100) / 100;
-    var cat = obtenerCategoriaIMC(imc);
+      var imc = calcularIMC(peso, altura);
+      var imcR = Math.round(imc * 100) / 100;
+      var cat = obtenerCategoriaIMC(imc);
 
-    resultadoIMC.style.display = 'block';
-    resultadoIMC.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      resultadoIMC.style.display = 'block';
+      resultadoIMC.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-    fijarMedidor(imcR);
+      fijarMedidor(imcR);
 
-    var trad = CATEGORIAS_TRAD[idiomaActual] || CATEGORIAS_TRAD['es'];
-    categoriaIMC.textContent = trad[cat.idx];
-    categoriaIMC.style.color = COLORES_CATEGORIA[cat.idx];
-    detalleIMC.textContent = descripcionIMC(imcR);
+      var trad = CATEGORIAS_TRAD[idiomaActual] || CATEGORIAS_TRAD['es'];
+      categoriaIMC.textContent = trad[cat.idx];
+      categoriaIMC.style.color = COLORES_CATEGORIA[cat.idx];
+      detalleIMC.textContent = descripcionIMC(imcR);
 
-    var consejo = document.createElement('p');
-    consejo.className = 'consejo-resultado';
-    consejo.textContent = consejoIMC(imcR);
-    var existente = resultadoIMC.querySelector('.consejo-resultado');
-    if (existente) existente.remove();
-    detalleIMC.insertAdjacentElement('afterend', consejo);
+      var consejo = document.createElement('p');
+      consejo.className = 'consejo-resultado';
+      consejo.textContent = consejoIMC(imcR);
+      var existente = resultadoIMC.querySelector('.consejo-resultado');
+      if (existente) existente.remove();
+      detalleIMC.insertAdjacentElement('afterend', consejo);
 
-    mostrarPesoIdeal(altura, peso);
+      mostrarPesoIdeal(altura, peso);
 
-    filasTabla.forEach(function (fila) {
-      fila.classList.remove('resaltado');
-      var min = parseFloat(fila.getAttribute('data-min'));
-      var max = parseFloat(fila.getAttribute('data-max'));
-      if (imcR >= min && imcR < max) fila.classList.add('resaltado');
+      filasTabla.forEach(function (fila) {
+        fila.classList.remove('resaltado');
+        var min = parseFloat(fila.getAttribute('data-min'));
+        var max = parseFloat(fila.getAttribute('data-max'));
+        if (imcR >= min && imcR < max) fila.classList.add('resaltado');
+      });
     });
-  });
+  }
 
   function mostrarError(formulario, mensaje) {
     var e = formulario.querySelector('.error-formulario');
@@ -626,40 +778,58 @@
   // Formulario TMB
   // ==========================================
 
-  formularioTMB.addEventListener('submit', function (e) {
-    e.preventDefault();
+  if (formularioTMB) {
+    formularioTMB.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    var esImperial = unidadesActual === 'imperial';
-    var peso = obtenerValorEntrada(pesoTMB, esImperial, true);
-    var altura = obtenerValorEntrada(alturaTMB, esImperial, false);
-    var edad = aNumero(edadTMB.value);
-    var sexo = obtenerSexo();
-    var factor = aNumero(actividadTMB.value);
+      var esImperial = unidadesActual === 'imperial';
+      var peso = obtenerValorEntrada(pesoTMB, esImperial, true);
+      var altura = obtenerValorEntrada(alturaTMB, esImperial, false);
+      var edad = aNumero(edadTMB.value);
+      var sexo = obtenerSexo();
+      var factor = aNumero(actividadTMB.value);
 
-    if (!peso || !altura || !edad || peso <= 0 || altura <= 0 || edad <= 0) {
-      mostrarError(formularioTMB, idiomaActual === 'en' ? 'Please fill all fields with valid values.' : 'Por favor, completa todos los campos.');
-      return;
-    }
+      if (!peso || !altura || !edad || peso <= 0 || altura <= 0 || edad <= 0) {
+        mostrarError(formularioTMB, idiomaActual === 'en' ? 'Please fill all fields with valid values.' : 'Por favor, completa todos los campos.');
+        return;
+      }
 
-    var tmb = Math.round(calcularTMB(peso, altura, edad, sexo));
-    var tdee = Math.round(tmb * factor);
-    var deficit = Math.round(tdee - 500);
-    var perdida = cambioSemanal(-500);
-    var superavit = Math.round(tdee + 500);
-    var ganancia = cambioSemanal(500);
+      var tmb = Math.round(calcularTMB(peso, altura, edad, sexo));
+      var tdee = Math.round(tmb * factor);
+      var deficit = Math.round(tdee - 500);
+      var perdida = cambioSemanal(-500);
+      var superavit = Math.round(tdee + 500);
+      var ganancia = cambioSemanal(500);
 
-    resultadoTMB.style.display = 'block';
-    resultadoTMB.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      resultadoTMB.style.display = 'block';
+      resultadoTMB.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-    animarContador(tmbValor, 0, tmb, 1000, 0);
-    animarContador(tdeeValor, 0, tdee, 1200, 0);
+      animarContador(tmbValor, 0, tmb, 1000, 0);
+      animarContador(tdeeValor, 0, tdee, 1200, 0);
 
-    deficitValor.textContent = deficit + ' kcal';
-    mantValor.textContent = tdee + ' kcal';
-    superavitValor.textContent = superavit + ' kcal';
-    perdidaValor.textContent = Math.abs(perdida).toFixed(2);
-    gananciaValor.textContent = ganancia.toFixed(2);
-  });
+      deficitValor.textContent = deficit + ' kcal';
+      mantValor.textContent = tdee + ' kcal';
+      superavitValor.textContent = superavit + ' kcal';
+      perdidaValor.textContent = Math.abs(perdida).toFixed(2);
+      gananciaValor.textContent = ganancia.toFixed(2);
+    });
+  }
+
+  // ==========================================
+  // FAQ Slider
+  // ==========================================
+
+  function initFaqSlider() {
+    if (!faqTrack || faqSlides.length === 0) return;
+
+    if (faqPrev) faqPrev.addEventListener('click', function () { faqIndex = Math.max(0, faqIndex - 1); actualizarFaqSlider(); });
+    if (faqNext) faqNext.addEventListener('click', function () { faqIndex = Math.min(faqSlides.length - 1, faqIndex + 1); actualizarFaqSlider(); });
+  }
+
+  function actualizarFaqSlider() {
+    if (!faqTrack) return;
+    faqTrack.style.transform = 'translateX(-' + (faqIndex * 100) + '%)';
+  }
 
   // ==========================================
   // Arranque

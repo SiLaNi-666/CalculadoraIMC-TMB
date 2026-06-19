@@ -4,34 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title data-i18n="titulo-pagina">Calculadora IMC y TMB — Calcula tu Índice de Masa Corporal y Tasa Metabólica Basal</title>
-  <meta name="description" content="Calcula tu IMC y TMB con medidor animado. Clasificación OMS, déficit y superávit calórico. Gratuito.">
-  <meta name="keywords" content="IMC, calculadora IMC, índice masa corporal, TMB, tasa metabólica basal, calorías, déficit calórico, peso saludable">
+  <title data-i18n="titulo-pagina">MetriBody | Calculadora IMC, TMB y Métricas Corporales</title>
+  <meta name="description" content="Calcula tu IMC, TMB y TDEE gratis. Herramientas de métricas corporales con medidor animado, clasificación OMS y ecuaciones validadas científicamente.">
+  <meta name="keywords" content="IMC, calculadora IMC, TMB, calculadora TMB, TDEE, índice masa corporal, tasa metabólica basal, calorías, déficit calórico, MetriBody">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="Calculadora IMC y TMB">
+  <meta name="author" content="MetriBody">
   <meta name="revisit-after" content="7 days">
-  <link rel="canonical" href="https://calculadoraimc.es/">
+  <link rel="canonical" href="https://metribody.netlify.app/">
+  <link rel="alternate" hreflang="es" href="https://metribody.netlify.app/">
+  <link rel="alternate" hreflang="en" href="https://metribody.netlify.app/">
 
-  <meta property="og:title" data-i18n-attr="content" data-i18n-key="og-titulo" content="Calculadora IMC y TMB — Gratuita y con medidor animado">
-  <meta property="og:description" data-i18n-attr="content" data-i18n-key="og-desc" content="Calcula tu IMC y TMB al instante. Obtén tu clasificación según la OMS con un medidor visual interactivo.">
+  <meta property="og:title" data-i18n-attr="content" data-i18n-key="og-titulo" content="MetriBody — Calculadora IMC y TMB gratis con medidor animado">
+  <meta property="og:description" data-i18n-attr="content" data-i18n-key="og-desc" content="Calcula tu IMC, TMB, TDEE y métricas corporales al instante. Clasificación OMS, medidor interactivo y déficit calórico.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://calculadoraimc.es/">
+  <meta property="og:url" content="https://metribody.netlify.app/">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" data-i18n-attr="content" data-i18n-key="tw-titulo" content="Calculadora IMC y TMB">
-  <meta name="twitter:description" data-i18n-attr="content" data-i18n-key="tw-desc" content="Calcula tu IMC y TMB con medidor animado. Clasificación OMS, déficit y superávit calórico.">
+  <meta name="twitter:title" data-i18n-attr="content" data-i18n-key="tw-titulo" content="MetriBody — Calculadora IMC y TMB">
+  <meta name="twitter:description" data-i18n-attr="content" data-i18n-key="tw-desc" content="Calcula tu IMC, TMB y más con medidor animado. Clasificación OMS y déficit calórico.">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Calculadora IMC y TMB",
-    "url": "https://calculadoraimc.es/",
-    "description": "Calcula tu Índice de Masa Corporal (IMC) y Tasa Metabólica Basal (TMB) de forma gratuita. Incluye medidor animado, clasificación OMS y recomendaciones calóricas.",
+    "name": "MetriBody",
+    "url": "https://metribody.netlify.app/",
+    "description": "Calcula tu IMC, TMB, TDEE y métricas corporales de forma gratuita. Incluye medidor animado, clasificación OMS y recomendaciones calóricas.",
     "applicationCategory": "HealthApplication",
     "operatingSystem": "All",
     "browserRequirements": "Requires JavaScript",
-    "inLanguage": "es"
+    "inLanguage": ["es", "en"]
   }
   </script>
 
@@ -42,291 +44,173 @@
 </head>
 <body>
 
-  <main class="contenedor">
-    <header class="encabezado">
-      <div class="icono-encabezado" aria-hidden="true">&#9878;</div>
-      <h1 data-i18n="titulo">Calculadora de IMC &amp; TMB</h1>
-      <p data-i18n="subtitulo">Conoce tu Índice de Masa Corporal y Tasa Metabólica Basal</p>
-    </header>
+<a href="#contenido-principal" class="enlace-salto">Saltar al contenido</a>
 
-    <div class="selector-idioma" id="selector-idioma" role="switch" aria-checked="true" aria-label="Cambiar idioma" tabindex="0">
-      <div class="pista-idioma" id="pista-idioma">
-        <span class="texto-es">ES</span>
-        <span class="texto-en">EN</span>
-        <div class="deslizador-idioma" id="deslizador-idioma">
-          <svg class="bandera" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
-            <rect width="30" height="20" fill="#C60B1E"/>
-            <rect y="5" width="30" height="10" fill="#FFC400"/>
-          </svg>
-        </div>
+<div class="selector-idioma" id="selector-idioma" role="switch" aria-checked="true" aria-label="Cambiar idioma" tabindex="0">
+  <div class="pista-idioma" id="pista-idioma">
+    <span class="texto-es">ES</span>
+    <span class="texto-en">EN</span>
+    <div class="deslizador-idioma" id="deslizador-idioma">
+      <svg class="bandera" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
+        <rect width="30" height="20" fill="#C60B1E"/>
+        <rect y="5" width="30" height="10" fill="#FFC400"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<nav class="navegacion-principal" aria-label="Navegación principal">
+  <div class="nav-marca">MetriBody</div>
+  <ul class="nav-lista">
+    <li><a href="index.html" class="nav-link" aria-current="page" data-i18n="nav-inicio">Inicio</a></li>
+    <li><a href="imc.html" class="nav-link" data-i18n="nav-imc">IMC</a></li>
+    <li><a href="tmb.html" class="nav-link" data-i18n="nav-tmb">TMB</a></li>
+    <li class="nav-desplegable">
+      <button class="nav-link" data-i18n="nav-herramientas">Herramientas</button>
+      <ul class="nav-submenu">
+        <li><a href="imc.html" class="nav-link" data-i18n="nav-imc">IMC</a></li>
+        <li><a href="tmb.html" class="nav-link" data-i18n="nav-tmb">TMB</a></li>
+        <li><span class="nav-link" data-i18n="nav-tdee" style="opacity:0.6">TDEE</span></li>
+        <li><span class="nav-link" data-i18n="nav-macros" style="opacity:0.6">Macros</span></li>
+        <li><span class="nav-link" data-i18n="nav-calorias" style="opacity:0.6">Calorías</span></li>
+        <li><span class="nav-link" data-i18n="nav-grasa" style="opacity:0.6">Grasa Corporal</span></li>
+      </ul>
+    </li>
+    <li><a href="#faq" class="nav-link" data-i18n="nav-faq">FAQ</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menú" aria-expanded="false">&#9776;</button>
+</nav>
+
+<main class="contenedor" id="contenido-principal">
+
+  <!-- Hero section -->
+  <section class="hero" aria-label="Presentación">
+    <div class="hero-contenido">
+      <h1 class="hero-titulo" data-i18n="hero-titulo">Tu centro de métricas corporales completo</h1>
+      <p class="hero-subtitulo" data-i18n="hero-subtitulo">Calcula tu IMC, TMB, TDEE y más. Herramientas gratuitas basadas en evidencia científica para conocer tu cuerpo.</p>
+      <div class="hero-acciones">
+        <a href="imc.html" class="btn btn-primario" data-i18n="hero-cta-imc">Calcular IMC</a>
+        <a href="tmb.html" class="btn btn-secundario" data-i18n="hero-cta-tmb">Calcular TMB</a>
       </div>
     </div>
+  </section>
 
-    <div class="barra-herramientas" role="toolbar" aria-label="Opciones">
-      <div class="grupo-herramientas">
-        <button class="herramienta herramienta-unidad activa" data-unidad="metrico" title="Sistema métrico" aria-label="Cambiar a métrico" data-i18n="metrico">Métrico</button>
-        <button class="herramienta herramienta-unidad" data-unidad="imperial" title="Sistema imperial" aria-label="Cambiar a imperial" data-i18n="imperial">Imperial</button>
-      </div>
-    </div>
-
-    <nav class="pestanas" role="tablist" aria-label="Calculadoras">
-      <button class="btn-pestana activo" data-pestana="imc" role="tab" aria-selected="true" id="pestana-imc" aria-controls="panel-imc" data-i18n="pestana-imc">IMC</button>
-      <button class="btn-pestana" data-pestana="tmb" role="tab" aria-selected="false" id="pestana-tmb" aria-controls="panel-tmb" data-i18n="pestana-tmb">TMB</button>
-    </nav>
-
-    <section class="contenido-pestana activo" id="panel-imc" role="tabpanel" aria-labelledby="pestana-imc">
-      <div class="info-box info-superior">
-        <h3 class="info-box-titulo" data-i18n="imc-que-es-titulo">¿Qué es el Índice de Masa Corporal?</h3>
-        <p class="info-box-texto" data-i18n="imc-que-es-texto">El <strong>Índice de Masa Corporal (IMC)</strong> es una medida estandarizada que relaciona el peso de una persona con su altura mediante la fórmula peso (kg) / altura² (m). La <strong>Organización Mundial de la Salud (OMS)</strong> lo reconoce como herramienta de cribado poblacional para clasificar el estado ponderal en adultos, basándose en estudios epidemiológicos que asocian cada rango con riesgos específicos de enfermedades crónicas. Se calcula de forma idéntica para hombres y mujeres mayores de 20 años. Aunque no mide directamente el porcentaje de grasa corporal, el IMC presenta una correlación moderada-alta con mediciones directas como la plicometría o la absorciometría DEXA. Por su sencillez, bajo coste y nula invasividad, es el método más utilizado en atención primaria y salud pública a nivel global. Sin embargo, tiene limitaciones en personas con alta masa muscular (deportistas), adultos mayores con sarcopenia y ciertos grupos étnicos como la población asiática, donde los puntos de corte pueden diferir.</p>
-        <ul class="info-box-lista" data-i18n="imc-que-es-lista">
-          <li><strong>Clasificación oficial OMS</strong> — ocho categorías que abarcan desde delgadez severa (&lt; 16) hasta obesidad grado III (≥ 40), cada una con implicaciones clínicas distintas.</li>
-          <li><strong>Rango de normopeso</strong> — entre 18.5 y 24.9, se asocia con la menor incidencia de enfermedades cardiovasculares, diabetes tipo 2 y ciertos tipos de cáncer según la OMS y la American Heart Association.</li>
-          <li><strong>Indicador de cribado, no diagnóstico</strong> — los profesionales sanitarios lo complementan con el perímetro de cintura, análisis de sangre y la historia clínica del paciente para obtener una valoración completa.</li>
-        </ul>
-      </div>
-      <article class="tarjeta">
-        <header class="encabezado-tarjeta">
-          <h2 data-i18n="imc-titulo">&#9878; Calcula tu IMC</h2>
-          <p data-i18n="imc-desc">El Índice de Masa Corporal relaciona tu peso y altura para evaluar tu estado nutricional.</p>
-        </header>
-        <form id="formulario-imc" class="formulario" novalidate>
-          <div class="fila-formulario">
-            <div class="grupo-formulario">
-              <label for="peso-imc" data-i18n="peso">Peso <span class="unidad" id="unidad-peso-imc">(kg)</span></label>
-              <div class="envoltorio-input">
-                <input type="number" id="peso-imc" name="peso" data-i18n-placeholder="placeholder-peso" placeholder="Ej: 70" min="1" max="500" step="0.1" required>
-                <span class="unidad-input" id="unidad-input-peso-imc" aria-hidden="true">kg</span>
-              </div>
-            </div>
-            <div class="grupo-formulario">
-              <label for="altura-imc" data-i18n="altura">Altura <span class="unidad" id="unidad-altura-imc">(cm)</span></label>
-              <div class="envoltorio-input">
-                <input type="number" id="altura-imc" name="altura" data-i18n-placeholder="placeholder-altura" placeholder="Ej: 175" min="1" max="300" step="0.1" required>
-                <span class="unidad-input" id="unidad-input-altura-imc" aria-hidden="true">cm</span>
-              </div>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primario" id="btn-imc">
-            <span class="texto-btn" data-i18n="btn-imc">Calcular IMC</span>
-            <span class="icono-btn" aria-hidden="true">&#10140;</span>
-          </button>
-        </form>
+  <!-- Tool cards -->
+  <section class="herramientas-seccion" aria-label="Herramientas disponibles">
+    <h2 class="seccion-titulo" data-i18n="herramientas-titulo">Herramientas</h2>
+    <div class="herramientas-cuadricula">
+      <article class="herramienta-tarjeta">
+        <div class="tarjeta-icono" aria-hidden="true">&#9878;</div>
+        <h3 class="tarjeta-titulo" data-i18n="tarjeta-imc-titulo">Calculadora de IMC</h3>
+        <p class="tarjeta-desc" data-i18n="tarjeta-imc-desc">Índice de Masa Corporal — clasificación OMS con medidor animado.</p>
+        <a href="imc.html" class="tarjeta-accion" data-i18n="hero-cta-imc">Calcular IMC</a>
       </article>
-
-      <div class="tarjeta-resultado" id="resultado-imc" style="display:none" role="region" aria-live="polite">
-        <div class="contenedor-medidor">
-          <svg class="svg-medidor" viewBox="0 0 300 270" aria-hidden="true">
-            <defs>
-              <linearGradient id="gradiente-medidor" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%"   stop-color="#dc2626"/>
-                <stop offset="14%"  stop-color="#ef4444"/>
-                <stop offset="22%"  stop-color="#f59e0b"/>
-                <stop offset="35%"  stop-color="#10b981"/>
-                <stop offset="50%"  stop-color="#10b981"/>
-                <stop offset="65%"  stop-color="#f59e0b"/>
-                <stop offset="78%"  stop-color="#f97316"/>
-                <stop offset="90%"  stop-color="#ef4444"/>
-                <stop offset="100%" stop-color="#dc2626"/>
-              </linearGradient>
-            </defs>
-            <path class="fondo-medidor" d="M 65.15 234.85 A 120 120 0 1 1 234.85 234.85" fill="none" stroke="#d4d4d4" stroke-width="24" stroke-linecap="round"/>
-            <path class="relleno-medidor" id="relleno-medidor" d="M 65.15 234.85 A 120 120 0 1 1 234.85 234.85" fill="none" stroke="url(#gradiente-medidor)" stroke-width="24" stroke-linecap="round" stroke-dasharray="565.487 565.487" stroke-dashoffset="565.487" style="transition: stroke-dashoffset 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);"/>
-          </svg>
-          <output class="valor-medidor" id="valor-medidor" for="peso-imc altura-imc">--</output>
-          <span class="etiqueta-medidor" data-i18n="etiqueta-imc">IMC</span>
-        </div>
-
-        <div class="info-resultado">
-          <div class="categoria-resultado" id="categoria-imc"></div>
-          <div class="detalle-resultado" id="detalle-imc"></div>
-        </div>
-
-        <div class="rango-peso-ideal" id="rango-peso-ideal" style="display:none">
-          <strong data-i18n="peso-ideal-label">&#9679; Peso saludable para tu altura:</strong>
-          <span id="texto-rango-peso"></span>
-        </div>
-
-        <div class="tabla-imc" role="table" aria-label="Clasificación del IMC según la OMS">
-          <div class="encabezado-tabla" role="row" data-i18n="tabla-titulo">Clasificaci&oacute;n del IMC</div>
-          <div class="fila-tabla" role="row" data-min="0" data-max="16"><span role="cell">&lt; 16</span><span role="cell" data-i18n="cat-severa">Delgadez severa</span></div>
-          <div class="fila-tabla" role="row" data-min="16" data-max="17"><span role="cell">16 - 16.99</span><span role="cell" data-i18n="cat-moderada">Delgadez moderada</span></div>
-          <div class="fila-tabla" role="row" data-min="17" data-max="18.5"><span role="cell">17 - 18.49</span><span role="cell" data-i18n="cat-leve">Delgadez leve</span></div>
-          <div class="fila-tabla" role="row" data-min="18.5" data-max="25"><span role="cell">18.5 - 24.99</span><span role="cell" data-i18n="cat-normal">Normal</span></div>
-          <div class="fila-tabla" role="row" data-min="25" data-max="30"><span role="cell">25 - 29.99</span><span role="cell" data-i18n="cat-sobrepeso">Sobrepeso</span></div>
-          <div class="fila-tabla" role="row" data-min="30" data-max="35"><span role="cell">30 - 34.99</span><span role="cell" data-i18n="cat-ob1">Obesidad grado I</span></div>
-          <div class="fila-tabla" role="row" data-min="35" data-max="40"><span role="cell">35 - 39.99</span><span role="cell" data-i18n="cat-ob2">Obesidad grado II</span></div>
-          <div class="fila-tabla" role="row" data-min="40" data-max="99"><span role="cell">&ge; 40</span><span role="cell" data-i18n="cat-ob3">Obesidad grado III</span></div>
-        </div>
-      </div>
-
-      <div class="info-box info-inferior">
-        <h3 class="info-box-titulo" data-i18n="imc-importancia-titulo">¿Por qué es importante conocer tu IMC?</h3>
-        <p class="info-box-texto" data-i18n="imc-importancia-texto">Mantener un IMC dentro del rango saludable es uno de los factores modificables más determinantes para la salud a largo plazo. La evidencia científica demuestra que el exceso de peso incrementa significativamente el riesgo de desarrollar múltiples patologías, mientras que un IMC inferior a 18.5 también conlleva riesgos asociados a la desnutrición y la fragilidad ósea. A continuación se detallan las principales condiciones relacionadas con un IMC alterado:</p>
-        <ul class="info-box-lista" data-i18n="imc-importancia-lista">
-          <li><strong>Enfermedades cardiovasculares</strong> — la obesidad aumenta la carga de trabajo del corazón, eleva la presión arterial y los niveles de colesterol LDL, y duplica el riesgo de insuficiencia cardíaca, infarto de miocardio y accidente cerebrovascular.</li>
-          <li><strong>Diabetes tipo 2</strong> — aproximadamente el 80-90 % de las personas con diabetes tipo 2 presentan sobrepeso u obesidad. El tejido adiposo en exceso provoca resistencia a la insulina, mecanismo subyacente de la enfermedad.</li>
-          <li><strong>Problemas articulares y osteoartritis</strong> — cada kilogramo de exceso de peso supone una carga adicional de 4 kg sobre las rodillas, acelerando la degradación del cartílago articular y limitando la movilidad.</li>
-          <li><strong>Apnea obstructiva del sueño</strong> — la acumulación de grasa en el cuello estrecha las vías respiratorias, provocando pausas respiratorias nocturnas que afectan a la calidad del sueño y aumentan el riesgo cardiovascular.</li>
-          <li><strong>Riesgo oncológico elevado</strong> — la OMS asocia la obesidad con un mayor riesgo de cáncer de esófago, colon, mama postmenopáusica, endometrio, riñón e hígado. Se estima que el 25 % de los casos de cáncer a nivel mundial guardan relación con el exceso de peso.</li>
-          <li><strong>Reducción de la esperanza de vida</strong> — la obesidad severa (IMC ≥ 40) puede reducir entre 5 y 10 años la esperanza de vida, un impacto comparable al del tabaquismo crónico.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="contenido-pestana" id="panel-tmb" role="tabpanel" aria-labelledby="pestana-tmb">
-      <div class="info-box info-superior">
-        <h3 class="info-box-titulo" data-i18n="tmb-que-es-titulo">¿Qué es la Tasa Metabólica Basal?</h3>
-        <p class="info-box-texto" data-i18n="tmb-que-es-texto">La <strong>Tasa Metabólica Basal (TMB)</strong> es la cantidad mínima de energía que el cuerpo humano necesita para mantener las funciones vitales en estado de reposo absoluto: respiración, circulación sanguínea, termorregulación, actividad neuronal y renovación celular. Representa entre el <strong>60 % y el 75 %</strong> del gasto energético total diario en personas sedentarias, siendo con diferencia el componente más significativo del balance energético. La ecuación de <strong>Mifflin-St Jeor</strong>, publicada en 1990 tras un estudio con 498 individuos sanos de entre 19 y 78 años, es la fórmula predictiva más precisa validada por la comunidad científica para la población general. La Academia de Nutrición y Dietética de Estados Unidos recomienda su uso como primera opción clínica cuando no se dispone de calorimetría indirecta. A diferencia del IMC, la TMB sí requiere datos de sexo y edad porque el metabolismo basal difiere significativamente entre hombres y mujeres y disminuye entre un 1 % y un 2 % por década a partir de los 20 años.</p>
-        <ul class="info-box-lista" data-i18n="tmb-que-es-lista">
-          <li><strong>Ecuación Mifflin-St Jeor (1990)</strong> — TMB hombres = 10 × peso (kg) + 6.25 × altura (cm) − 5 × edad + 5; TMB mujeres = 10 × peso (kg) + 6.25 × altura (cm) − 5 × edad − 161. Basada en 498 sujetos sanos medida por calorimetría indirecta.</li>
-          <li><strong>60-75 % del gasto diario</strong> — muy por encima del efecto termogénico de los alimentos (~10 %) y la actividad física (~15-30 %). Esta proporción convierte a la TMB en el factor clave de cualquier intervención nutricional.</li>
-          <li><strong>Factores determinantes</strong> — peso corporal, altura, edad (declina ~1-2 % por década), sexo (los hombres presentan mayor masa magra) y composición corporal (a más músculo, mayor TMB).</li>
-        </ul>
-      </div>
-      <article class="tarjeta">
-        <header class="encabezado-tarjeta">
-          <h2 data-i18n="tmb-titulo">&#9881; Calcula tu TMB</h2>
-          <p data-i18n="tmb-desc">La Tasa Metabólica Basal son las calor&iacute;as que consumes en reposo. Con ella podr&aacute;s planificar tu dieta con precisi&oacute;n.</p>
-        </header>
-        <form id="formulario-tmb" class="formulario" novalidate>
-          <div class="fila-formulario fila-formulario-3">
-            <div class="grupo-formulario">
-              <label for="peso-tmb" data-i18n="peso">Peso <span class="unidad" id="unidad-peso-tmb">(kg)</span></label>
-              <div class="envoltorio-input">
-                <input type="number" id="peso-tmb" name="peso" data-i18n-placeholder="placeholder-peso" placeholder="Ej: 70" min="1" max="500" step="0.1" required>
-                <span class="unidad-input" id="unidad-input-peso-tmb" aria-hidden="true">kg</span>
-              </div>
-            </div>
-            <div class="grupo-formulario">
-              <label for="altura-tmb" data-i18n="altura">Altura <span class="unidad" id="unidad-altura-tmb">(cm)</span></label>
-              <div class="envoltorio-input">
-                <input type="number" id="altura-tmb" name="altura" data-i18n-placeholder="placeholder-altura" placeholder="Ej: 175" min="1" max="300" step="0.1" required>
-                <span class="unidad-input" id="unidad-input-altura-tmb" aria-hidden="true">cm</span>
-              </div>
-            </div>
-            <div class="grupo-formulario">
-              <label for="edad-tmb" data-i18n="edad">Edad <span class="unidad">(a&ntilde;os)</span></label>
-              <div class="envoltorio-input">
-                <input type="number" id="edad-tmb" name="edad" placeholder="Ej: 25" min="1" max="120" required>
-                <span class="unidad-input" aria-hidden="true">a&ntilde;os</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="fila-formulario">
-            <div class="grupo-formulario">
-              <label data-i18n="sexo">Sexo</label>
-              <div class="grupo-radio">
-                <label class="btn-radio">
-                  <input type="radio" name="sexo" value="hombre" checked>
-                  <span class="indicador-radio" aria-hidden="true"></span>
-                  <span class="etiqueta-radio" data-i18n="hombre">Hombre</span>
-                </label>
-                <label class="btn-radio">
-                  <input type="radio" name="sexo" value="mujer">
-                  <span class="indicador-radio" aria-hidden="true"></span>
-                  <span class="etiqueta-radio" data-i18n="mujer">Mujer</span>
-                </label>
-              </div>
-            </div>
-            <div class="grupo-formulario">
-              <label for="actividad-tmb" data-i18n="actividad">Nivel de actividad</label>
-              <div class="envoltorio-select">
-                <select id="actividad-tmb" name="actividad" required>
-                  <option value="1.2" data-i18n="act-sed">Sedentario — poco o ning&uacute;n ejercicio</option>
-                  <option value="1.375" data-i18n="act-lig">Ligero — 1-3 d&iacute;as/semana</option>
-                  <option value="1.55" selected data-i18n="act-mod">Moderado — 3-5 d&iacute;as/semana</option>
-                  <option value="1.725" data-i18n="act-act">Activo — 6-7 d&iacute;as/semana</option>
-                  <option value="1.9" data-i18n="act-ext">Muy activo — 2 veces/d&iacute;a o trabajo f&iacute;sico</option>
-                </select>
-                <span class="flecha-select" aria-hidden="true">&#9660;</span>
-              </div>
-            </div>
-          </div>
-
-          <button type="submit" class="btn btn-primario" id="btn-tmb">
-            <span class="texto-btn" data-i18n="btn-tmb">Calcular TMB</span>
-            <span class="icono-btn" aria-hidden="true">&#10140;</span>
-          </button>
-        </form>
+      <article class="herramienta-tarjeta">
+        <div class="tarjeta-icono" aria-hidden="true">&#9881;</div>
+        <h3 class="tarjeta-titulo" data-i18n="tarjeta-tmb-titulo">Calculadora de TMB</h3>
+        <p class="tarjeta-desc" data-i18n="tarjeta-tmb-desc">Tasa Metabólica Basal — calorías en reposo con ecuación Mifflin-St Jeor.</p>
+        <a href="tmb.html" class="tarjeta-accion" data-i18n="hero-cta-tmb">Calcular TMB</a>
       </article>
-
-      <div class="tarjeta-resultado" id="resultado-tmb" style="display:none" role="region" aria-live="polite">
-        <div class="cuadricula-tmb">
-          <div class="metrica-tmb">
-            <output class="valor-metrica" id="tmb-valor">0</output>
-            <div class="etiqueta-metrica">TMB <span class="unidad">kcal/d&iacute;a</span></div>
-            <div class="descripcion-metrica" data-i18n="desc-tmb">Metabolismo basal en reposo</div>
-          </div>
-          <div class="separador-tmb" aria-hidden="true">&rarr;</div>
-          <div class="metrica-tmb">
-            <output class="valor-metrica" id="tdee-valor">0</output>
-            <div class="etiqueta-metrica">TDEE <span class="unidad">kcal/d&iacute;a</span></div>
-            <div class="descripcion-metrica" data-i18n="desc-tdee">Gasto energ&eacute;tico total</div>
-          </div>
-        </div>
-
-        <div class="recomendaciones-tmb">
-          <div class="tarjeta-recomendacion recomendacion-deficit">
-            <div class="titulo-recomendacion" data-i18n="deficit-tit">D&eacute;ficit <span class="emoji-recomendacion" aria-hidden="true">&#128200;</span></div>
-            <output class="valor-recomendacion" id="deficit-valor">0</output>
-            <div class="descripcion-recomendacion" data-i18n="deficit-desc">kcal/d&iacute;a para perder <span id="perdida-valor">0</span> <span class="unidad-perdida" id="unidad-perdida">kg</span>/semana</div>
-          </div>
-          <div class="tarjeta-recomendacion recomendacion-mant">
-            <div class="titulo-recomendacion" data-i18n="mant-tit">Mantenimiento <span class="emoji-recomendacion" aria-hidden="true">&#9888;</span></div>
-            <output class="valor-recomendacion" id="mant-valor">0</output>
-            <div class="descripcion-recomendacion" data-i18n="mant-desc">kcal/d&iacute;a para mantener tu peso</div>
-          </div>
-          <div class="tarjeta-recomendacion recomendacion-super">
-            <div class="titulo-recomendacion" data-i18n="super-tit">Super&aacute;vit <span class="emoji-recomendacion" aria-hidden="true">&#128170;</span></div>
-            <output class="valor-recomendacion" id="superavit-valor">0</output>
-            <div class="descripcion-recomendacion" data-i18n="super-desc">kcal/d&iacute;a para ganar <span id="ganancia-valor">0</span> <span class="unidad-ganancia" id="unidad-ganancia">kg</span>/semana</div>
-          </div>
-        </div>
-
-        <div class="nota-tmb" data-i18n="tmb-nota">
-          <strong>&#9432; Nota:</strong> Estas cifras son estimaciones basadas en la ecuaci&oacute;n Mifflin-St Jeor. Consulta a un profesional de la salud antes de iniciar cualquier dieta o plan de ejercicio.
-        </div>
-      </div>
-
-      <div class="info-box info-inferior">
-        <h3 class="info-box-titulo" data-i18n="tmb-importancia-titulo">¿Por qué es importante calcular tu TMB?</h3>
-        <p class="info-box-texto" data-i18n="tmb-importancia-texto">Conocer tu TMB es el punto de partida de cualquier estrategia nutricional basada en la evidencia. A partir de ella se calcula el Gasto Energético Total (TDEE) multiplicándola por un factor de actividad física, lo que permite diseñar planes de alimentación personalizados con objetivos concretos. Estos son los escenarios más habituales:</p>
-        <ul class="info-box-lista" data-i18n="tmb-importancia-lista">
-          <li><strong>Cálculo del TDEE</strong> — multiplica tu TMB por el factor de actividad: 1.2 (sedentario), 1.375 (ligero), 1.55 (moderado), 1.725 (activo) o 1.9 (muy activo). El resultado son las calorías reales que necesitas cada día según tu estilo de vida.</li>
-          <li><strong>Pérdida de peso controlada</strong> — un déficit calórico de aproximadamente 500 kcal diarias respecto al TDEE permite perder unos 0.5 kg por semana, ritmo considerado seguro y sostenible por la comunidad médica.</li>
-          <li><strong>Ganancia de masa muscular</strong> — un superávit controlado de 300-500 kcal diarias proporciona la energía extra necesaria para la síntesis proteica sin acumular exceso de grasa.</li>
-          <li><strong>Mantenimiento a largo plazo</strong> — ajustar la ingesta calórica al valor exacto del TDEE evita el temido efecto rebote tras una dieta y facilita la adherencia a hábitos saludables.</li>
-          <li><strong>Planificación individualizada</strong> — desde la vida sedentaria (factor 1.2) hasta el entrenamiento de alta intensidad (factor 1.9), la TMB permite adaptar la nutrición al gasto energético real de cada persona.</li>
-        </ul>
-      </div>
-    </section>
-
-    <div class="referencias" id="referencias">
-      <button class="ref-toggle" id="ref-toggle" data-i18n="ref-titulo">📚 Fuentes y referencias ▶</button>
-      <div class="ref-lista" id="ref-lista">
-        <ol>
-          <li><a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener noreferrer" data-i18n="ref-1">WHO — Obesity and overweight (clasificación del IMC y prevalencia global)</a></li>
-          <li><a href="https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index" target="_blank" rel="noopener noreferrer" data-i18n="ref-2">WHO Global Health Observatory — Body mass index (BMI) data portal</a></li>
-          <li><a href="https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html" target="_blank" rel="noopener noreferrer" data-i18n="ref-3">CDC — Adult BMI Categories (clasificación oficial de EE.UU.)</a></li>
-          <li><a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm" target="_blank" rel="noopener noreferrer" data-i18n="ref-4">NHLBI / NIH — Calculate Your BMI (National Heart, Lung, and Blood Institute)</a></li>
-          <li><a href="https://www.heart.org/en/healthy-living/healthy-eating/losing-weight/bmi-in-adults" target="_blank" rel="noopener noreferrer" data-i18n="ref-5">American Heart Association — Body Mass Index in Adults</a></li>
-          <li><a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" data-i18n="ref-6">PubMed / NIH — Mifflin-St Jeor original study (Am J Clin Nutr, 1990)</a></li>
-          <li><a href="https://www.aesan.gob.es/" target="_blank" rel="noopener noreferrer" data-i18n="ref-7">AESAN — Agencia Española de Seguridad Alimentaria y Nutrición</a></li>
-          <li><a href="https://www.seen.es/calculadoras/calculadora-imc" target="_blank" rel="noopener noreferrer" data-i18n="ref-8">SEEN — Sociedad Española de Endocrinología y Nutrición</a></li>
-        </ol>
-      </div>
+      <article class="herramienta-tarjeta herramienta-prox">
+        <div class="tarjeta-icono" aria-hidden="true">&#128200;</div>
+        <h3 class="tarjeta-titulo" data-i18n="tarjeta-tdee-titulo">Calculadora TDEE</h3>
+        <p class="tarjeta-desc" data-i18n="tarjeta-tdee-desc">Gasto Energético Total — descubre tus calorías diarias reales según tu actividad.</p>
+        <span class="prox-etiqueta" data-i18n="proximamente">Próximamente</span>
+      </article>
     </div>
-  </main>
+  </section>
 
-  <footer class="pie-pagina">
-    <p><small data-i18n="footer">Calculadora IMC &amp; TMB &mdash; 2025 &mdash; Informaci&oacute;n con fines informativos, no sustituye el consejo m&eacute;dico profesional.</small></p>
-  </footer>
+  <!-- CTA -->
+  <section class="cta-seccion" aria-label="Llamada a la acción">
+    <h2 class="cta-titulo" data-i18n="cta-titulo">Comienza a conocerte mejor</h2>
+    <p class="cta-desc" data-i18n="cta-desc">Usa nuestras herramientas gratuitas para calcular tu IMC y TMB al instante. Sin registro, sin complicaciones.</p>
+    <div class="cta-acciones">
+      <a href="imc.html" class="btn btn-primario" data-i18n="cta-btn-imc">Calcular mi IMC</a>
+      <a href="tmb.html" class="btn btn-secundario" data-i18n="cta-btn-tmb">Calcular mi TMB</a>
+    </div>
+  </section>
 
-  <button class="herramienta btn-modo-oscuro-fijo" id="btn-modo-oscuro" title="Modo oscuro" aria-label="Alternar modo oscuro">
-    <span class="icono-modo" id="icono-modo">&#9790;</span>
-  </button>
+  <!-- FAQ Slider -->
+  <section class="faq-seccion" id="faq" aria-label="Preguntas frecuentes">
+    <h2 class="seccion-titulo" data-i18n="faq-titulo">Preguntas Frecuentes</h2>
+    <div class="faq-slider-contenedor">
+      <button class="faq-slider-btn faq-slider-prev" id="faq-prev" aria-label="Anterior">&#9664;</button>
+      <div class="faq-slider-viewport">
+        <div class="faq-slider-track" id="faq-track">
+          <div class="faq-slide" data-index="0">
+            <div class="faq-slide-inner">
+              <h3 class="faq-slide-pregunta" data-i18n="faq-q1">¿Qué es el IMC y cómo se calcula?</h3>
+              <p class="faq-slide-respuesta" data-i18n="faq-a1">El Índice de Masa Corporal (IMC) es una medida que relaciona tu peso y altura mediante la fórmula: peso (kg) / altura² (m). Se usa como herramienta de cribado para clasificar el peso en adultos según los rangos establecidos por la OMS.</p>
+            </div>
+          </div>
+          <div class="faq-slide" data-index="1">
+            <div class="faq-slide-inner">
+              <h3 class="faq-slide-pregunta" data-i18n="faq-q2">¿Qué es la TMB y por qué es importante?</h3>
+              <p class="faq-slide-respuesta" data-i18n="faq-a2">La Tasa Metabólica Basal (TMB) son las calorías que tu cuerpo quema en reposo absoluto para mantener funciones vitales. Conocerla es el primer paso para diseñar una dieta personalizada, ya que representa entre el 60-75 % del gasto energético total.</p>
+            </div>
+          </div>
+          <div class="faq-slide" data-index="2">
+            <div class="faq-slide-inner">
+              <h3 class="faq-slide-pregunta" data-i18n="faq-q3">¿Cuál es la diferencia entre IMC y TMB?</h3>
+              <p class="faq-slide-respuesta" data-i18n="faq-a3">El IMC mide la relación entre peso y altura para evaluar si tu peso es saludable. La TMB mide la energía que consumes en reposo. Mientras el IMC te dice "cómo estás", la TMB te dice "cuánta energía necesitas". Son herramientas complementarias.</p>
+            </div>
+          </div>
+          <div class="faq-slide" data-index="3">
+            <div class="faq-slide-inner">
+              <h3 class="faq-slide-pregunta" data-i18n="faq-q4">¿Cómo puedo calcular mi déficit calórico?</h3>
+              <p class="faq-slide-respuesta" data-i18n="faq-a4">Primero calcula tu TMB, multiplícala por tu factor de actividad para obtener tu TDEE, y resta 300-500 kcal. Ese rango es un déficit seguro para perder peso de forma gradual sin perder masa muscular significativa.</p>
+            </div>
+          </div>
+          <div class="faq-slide" data-index="4">
+            <div class="faq-slide-inner">
+              <h3 class="faq-slide-pregunta" data-i18n="faq-q5">¿El IMC es fiable para deportistas?</h3>
+              <p class="faq-slide-respuesta" data-i18n="faq-a5">El IMC tiene limitaciones en personas con alta masa muscular, ya que no distingue entre peso magro y graso. Un deportista puede tener un IMC alto sin tener exceso de grasa. En estos casos se recomienda complementar con medición de pliegues o bioimpedancia.</p>
+            </div>
+          </div>
+          <div class="faq-slide" data-index="5">
+            <div class="faq-slide-inner">
+              <h3 class="faq-slide-pregunta" data-i18n="faq-q6">¿Con qué frecuencia debo calcular mi IMC o TMB?</h3>
+              <p class="faq-slide-respuesta" data-i18n="faq-a6">El IMC puede calcularse mensualmente o al cambiar significativamente de peso. La TMB solo cambia con variaciones importantes en la composición corporal o edad, por lo que basta con recalcularla cada 3-6 meses.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="faq-slider-btn faq-slider-next" id="faq-next" aria-label="Siguiente">&#9654;</button>
+    </div>
+  </section>
 
-  <script src="scripts/script.js" defer></script>
+  <!-- Referencias -->
+  <div class="referencias" id="referencias">
+    <button class="ref-toggle" id="ref-toggle" data-i18n="ref-titulo">📚 Fuentes y referencias ▶</button>
+    <div class="ref-lista" id="ref-lista">
+      <ol>
+        <li><a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight" target="_blank" rel="noopener noreferrer" data-i18n="ref-1">WHO — Obesity and overweight (clasificación del IMC y prevalencia global)</a></li>
+        <li><a href="https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/body-mass-index" target="_blank" rel="noopener noreferrer" data-i18n="ref-2">WHO Global Health Observatory — Body mass index (BMI) data portal</a></li>
+        <li><a href="https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html" target="_blank" rel="noopener noreferrer" data-i18n="ref-3">CDC — Adult BMI Categories (clasificación oficial de EE.UU.)</a></li>
+        <li><a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm" target="_blank" rel="noopener noreferrer" data-i18n="ref-4">NHLBI / NIH — Calculate Your BMI (National Heart, Lung, and Blood Institute)</a></li>
+        <li><a href="https://www.heart.org/en/healthy-living/healthy-eating/losing-weight/bmi-in-adults" target="_blank" rel="noopener noreferrer" data-i18n="ref-5">American Heart Association — Body Mass Index in Adults</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer" data-i18n="ref-6">PubMed / NIH — Mifflin-St Jeor original study (Am J Clin Nutr, 1990)</a></li>
+        <li><a href="https://www.aesan.gob.es/" target="_blank" rel="noopener noreferrer" data-i18n="ref-7">AESAN — Agencia Española de Seguridad Alimentaria y Nutrición</a></li>
+        <li><a href="https://www.seen.es/calculadoras/calculadora-imc" target="_blank" rel="noopener noreferrer" data-i18n="ref-8">SEEN — Sociedad Española de Endocrinología y Nutrición</a></li>
+      </ol>
+    </div>
+  </div>
+
+</main>
+
+<footer class="pie-pagina">
+  <div class="footer-enlaces">
+    <a href="privacidad.html" data-i18n="footer-privacidad">Política de Privacidad</a>
+    <a href="cookies.html" data-i18n="footer-cookies">Política de Cookies</a>
+    <a href="aviso-legal.html" data-i18n="footer-aviso">Aviso Legal</a>
+  </div>
+  <p><small data-i18n="footer">MetriBody — 2025 — Información con fines informativos, no sustituye el consejo médico profesional.</small></p>
+</footer>
+
+<button class="herramienta btn-modo-oscuro-fijo" id="btn-modo-oscuro" title="Modo oscuro" aria-label="Alternar modo oscuro">
+  <span class="icono-modo" id="icono-modo">&#9790;</span>
+</button>
+
+<script src="scripts/script.js" defer></script>
 </body>
 </html>
